@@ -1,0 +1,36 @@
+{
+  "intro": [
+    {
+      "id": 1,
+      "text": [
+        "Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "3Bonjour mon ami, tu te demandes sûrement ce que tu fais là!"
+      ],
+      "choices": [
+        {
+          "proposition": "Je me demande surtout qui tu es ! "
+        },
+        {
+          "proposition": "Choix 2  "
+        }
+      ],
+      "audio": "/audios/intro/1"
+    },
+    {
+      "id": 2,
+      "text": [
+        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "3sv sBonjour mon ami, tu te demandes sûrement ce que tu fais là!"
+      ],
+      "choices": [
+        {
+          "proposition": "Je me demande surtout qui tu es ! ",
+          "switchToGame": "madeleine"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    }
+  ]
+}

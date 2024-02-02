@@ -1,3 +1,7 @@
+.choices-container {
+  margin-top: 50px;
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
