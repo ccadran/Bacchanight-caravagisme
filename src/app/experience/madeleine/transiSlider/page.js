@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import dataIntro from "../../data/intro.json";
-import Dialogue from "../components/Dialogue/dialogue";
-import { useRouter } from "next/navigation";
+import dataMadeleine from "../../../../data/madeleine.json";
+import Dialogue from "../../../components/Dialogue/dialogue";
 
 export default function Page() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,39 +35,41 @@ export default function Page() {
   };
 
   useEffect(() => {
-    console.log(currentIndex, dataIntro.intro[currentIndex].audio);
+    console.log(currentIndex, dataMadeleine.transition[currentIndex].audio);
   }, []);
 
   return (
     <div className="dialogues">
-      {currentIndex < dataIntro.intro.length && (
+      {currentIndex < dataMadeleine.transition.length && (
         <>
           <div className="dialogues-container">
-            {dataIntro.intro[currentIndex].text.map((line, index) => (
+            {dataMadeleine.transition[currentIndex].text.map((line, index) => (
               <Dialogue key={index} dialogue={line} />
             ))}
           </div>
           <div className="choices-container">
             {showChoices &&
-              dataIntro.intro[currentIndex].choices &&
-              dataIntro.intro[currentIndex].choices.map((choice, index) => (
-                <a
-                  key={index}
-                  onClick={() => handleChoiceClick(choice.switchToGame)}
-                  href={
-                    choice.switchToGame
-                      ? `/experience/${choice.switchToGame}`
-                      : undefined
-                  }
-                >
-                  {choice.proposition}
-                </a>
-              ))}
+              dataMadeleine.transition[currentIndex].choices &&
+              dataMadeleine.transition[currentIndex].choices.map(
+                (choice, index) => (
+                  <a
+                    key={index}
+                    onClick={() => handleChoiceClick(choice.switchToGame)}
+                    href={
+                      choice.switchToGame
+                        ? `/experience/madeleine/${choice.switchToGame}`
+                        : undefined
+                    }
+                  >
+                    {choice.proposition}
+                  </a>
+                )
+              )}
           </div>
 
           <audio
             id="audioElement"
-            src={`${dataIntro.intro[currentIndex].audio}.mp3`}
+            src={`${dataMadeleine.transition[currentIndex].audio}.mp3`}
             controls
             autoPlay
           ></audio>

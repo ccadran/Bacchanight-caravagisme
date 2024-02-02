@@ -1,0 +1,53 @@
+{
+  "intro": [
+    {
+      "id": 1,
+      "text": [
+        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "Je sais que cette œuvre contient une source de lumière, seulement je n’arrive pas à savoir où elle se situe dans la composition. Il faut que tu m’aides!"
+      ],
+      "choices": [
+        {
+          "proposition": "J'y suis ",
+          "switchToGame": "colorPicker"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    }
+  ],
+  "transition": [
+    {
+      "id": 1,
+      "text": [
+        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "Bien, désormais il ne manque plus qu’à trouver ce que Sainte Irène porte dans ses mains, les écrits se sont grandement détériorés avec le temps, dis-moi ce que tu vois lorsque tu regardes le tableau."
+      ],
+      "choices": [
+        {
+          "proposition": "Je me demande surtout qui tu es ! ",
+          "switchToGame": "puzzle"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    }
+  ],
+  "machine": [
+    {
+      "id": 1,
+      "text": [
+        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "Je vais appuyer sur le bouton d’activation, tu n’auras qu'à cliquer sur ton écran au bon moment. Tu vas vite comprendre ne t’inquiète pas."
+      ],
+      "choices": [
+        {
+          "proposition": "Je me demande surtout qui tu es ! ",
+          "switchToGame": "machine"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    }
+  ]
+}

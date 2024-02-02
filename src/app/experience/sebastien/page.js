@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import dataIntro from "../../data/intro.json";
-import Dialogue from "../components/Dialogue/dialogue";
-import { useRouter } from "next/navigation";
+import dataSebastien from "../../../data/sebastien.json";
+import Dialogue from "../../components/Dialogue/dialogue";
 
 export default function Page() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,28 +35,28 @@ export default function Page() {
   };
 
   useEffect(() => {
-    console.log(currentIndex, dataIntro.intro[currentIndex].audio);
+    console.log(currentIndex, dataSebastien.intro[currentIndex].audio);
   }, []);
 
   return (
     <div className="dialogues">
-      {currentIndex < dataIntro.intro.length && (
+      {currentIndex < dataSebastien.intro.length && (
         <>
           <div className="dialogues-container">
-            {dataIntro.intro[currentIndex].text.map((line, index) => (
+            {dataSebastien.intro[currentIndex].text.map((line, index) => (
               <Dialogue key={index} dialogue={line} />
             ))}
           </div>
           <div className="choices-container">
             {showChoices &&
-              dataIntro.intro[currentIndex].choices &&
-              dataIntro.intro[currentIndex].choices.map((choice, index) => (
+              dataSebastien.intro[currentIndex].choices &&
+              dataSebastien.intro[currentIndex].choices.map((choice, index) => (
                 <a
                   key={index}
                   onClick={() => handleChoiceClick(choice.switchToGame)}
                   href={
                     choice.switchToGame
-                      ? `/experience/${choice.switchToGame}`
+                      ? `/experience/sebastien/${choice.switchToGame}`
                       : undefined
                   }
                 >
@@ -68,7 +67,7 @@ export default function Page() {
 
           <audio
             id="audioElement"
-            src={`${dataIntro.intro[currentIndex].audio}.mp3`}
+            src={`${dataSebastien.intro[currentIndex].audio}.mp3`}
             controls
             autoPlay
           ></audio>
