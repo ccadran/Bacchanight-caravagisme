@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 import dataIntro from "../../data/intro.json";
 import Dialogue from "../components/Dialogue/dialogue";
+import styles from "./page.module.scss";
 
 export default function Page() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,10 +83,10 @@ export default function Page() {
   };
 
   return (
-    <div className="dialogues">
+    <div className={styles.dialogues}>
       {currentIndex < dataIntro.intro.length && (
         <>
-          <div className="dialogues-container">
+          {/* <div className="dialogues-container">
             {dataIntro.intro[currentIndex].text.map((line, index) => (
               <Dialogue
                 className={`line-${index}`}
@@ -94,7 +95,7 @@ export default function Page() {
               />
             ))}
           </div>
-          {renderChoices()}
+          {renderChoices()} */}
           <audio
             id="audioElement"
             src={`${dataIntro.intro[currentIndex].audio}.mp3`}

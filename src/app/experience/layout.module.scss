@@ -1,0 +1,56 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  height: 100vh;
+}
+.infosContainer {
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  .controller {
+    display: flex;
+    .volume {
+      margin-left: 26px;
+    }
+  }
+}
+.traveler {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  .scientifique {
+    width: 50%;
+    .imgContainer {
+      width: 100%;
+      height: 80%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .travelerVoice {
+      height: 20%;
+      .imgContainer {
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .imgContainer {
+    width: 50%;
+    // max-height: 225px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
