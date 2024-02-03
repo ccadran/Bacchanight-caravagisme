@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import gsap from "gsap";
 import dataMadeleine from "../../../data/madeleine.json";
 import Dialogue from "../../components/Dialogue/dialogue";
 
@@ -24,6 +25,28 @@ export default function Page() {
     }
   }, [currentIndex]);
 
+  useEffect(() => {
+    // Create GSAP timeline for line animation
+    const lineTimeline = gsap.timeline({});
+
+    // Add each line to the timeline with a fade-in effect
+    dataMadeleine.intro[currentIndex].text.forEach((line, index) => {
+      lineTimeline.fromTo(
+        `.line-${index}`,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, ease: "power2.inOut" },
+        index * 1.5 // Adjust the delay between lines if needed
+      );
+    });
+
+    // Play the timeline
+    lineTimeline.play();
+
+    return () => {
+      lineTimeline.kill(); // Kill the timeline when component unmounts
+    };
+  }, [currentIndex]);
+
   const handleChoiceClick = (switchToGame) => {
     if (switchToGame) {
       console.log("Switching to game:", switchToGame);
@@ -34,9 +57,29 @@ export default function Page() {
     }
   };
 
-  useEffect(() => {
-    console.log(currentIndex, dataMadeleine.intro[currentIndex].audio);
-  }, []);
+  const renderChoices = () => {
+    if (showChoices) {
+      return (
+        <div className="choices-container">
+          {dataMadeleine.intro[currentIndex].choices &&
+            dataMadeleine.intro[currentIndex].choices.map((choice, index) => (
+              <a
+                key={index}
+                onClick={() => handleChoiceClick(choice.switchToGame)}
+                href={
+                  choice.switchToGame
+                    ? `/experience/madeleine/${choice.switchToGame}`
+                    : undefined
+                }
+              >
+                {choice.proposition}
+              </a>
+            ))}
+        </div>
+      );
+    }
+    return null;
+  };
 
   return (
     <div className="dialogues">
@@ -44,27 +87,14 @@ export default function Page() {
         <>
           <div className="dialogues-container">
             {dataMadeleine.intro[currentIndex].text.map((line, index) => (
-              <Dialogue key={index} dialogue={line} />
+              <Dialogue
+                className={`line-${index}`}
+                key={index}
+                dialogue={line}
+              />
             ))}
           </div>
-          <div className="choices-container">
-            {showChoices &&
-              dataMadeleine.intro[currentIndex].choices &&
-              dataMadeleine.intro[currentIndex].choices.map((choice, index) => (
-                <a
-                  key={index}
-                  onClick={() => handleChoiceClick(choice.switchToGame)}
-                  href={
-                    choice.switchToGame
-                      ? `/experience/madeleine/${choice.switchToGame}`
-                      : undefined
-                  }
-                >
-                  {choice.proposition}
-                </a>
-              ))}
-          </div>
-
+          {renderChoices()}
           <audio
             id="audioElement"
             src={`${dataMadeleine.intro[currentIndex].audio}.mp3`}
