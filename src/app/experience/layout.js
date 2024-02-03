@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
             </div>
             <div className={styles.travelerVoice}>
               <h4>Scientifique</h4>
-              <div className={styles.imgContainer}>
+              <div className={styles.imgContainer2}>
                 <img src="/images/songLottie.png" alt="" />
               </div>
             </div>

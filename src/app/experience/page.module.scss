@@ -1,3 +1,12 @@
 .dialogues {
   height: 65vh;
+  .dialoguesContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.choicesContainer {
+  position: fixed;
+  bottom: 0;
 }

@@ -61,7 +61,7 @@ export default function Page() {
   const renderChoices = () => {
     if (showChoices) {
       return (
-        <div className="choices-container">
+        <div className={styles.choicesContainer}>
           {dataIntro.intro[currentIndex].choices &&
             dataIntro.intro[currentIndex].choices.map((choice, index) => (
               <a
@@ -86,7 +86,7 @@ export default function Page() {
     <div className={styles.dialogues}>
       {currentIndex < dataIntro.intro.length && (
         <>
-          {/* <div className="dialogues-container">
+          <div className={styles.dialoguesContainer}>
             {dataIntro.intro[currentIndex].text.map((line, index) => (
               <Dialogue
                 className={`line-${index}`}
@@ -95,7 +95,7 @@ export default function Page() {
               />
             ))}
           </div>
-          {renderChoices()} */}
+          {renderChoices()}
           <audio
             id="audioElement"
             src={`${dataIntro.intro[currentIndex].audio}.mp3`}
