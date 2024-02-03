@@ -6,10 +6,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <body>
-      <nav>
-        <li>nav</li>
-      </nav>
-      <div className="scientifiques"></div>
+      <div className="nav-container">
+        <h4>signal faible</h4>
+        <div className="controller">
+          <p>Batterie</p>
+          <p>volume</p>
+        </div>
+      </div>
+      <div className="traveler">
+        <div className="scientifique">
+          <div className="img-container">
+            <img src="" alt="" />
+          </div>
+          <div className="traveler-voice">
+            <h4>Scientifique</h4>
+            <p>Lottie</p>
+          </div>
+        </div>
+        <h2>Lottie</h2>
+      </div>
 
       {children}
     </body>
