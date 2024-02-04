@@ -1,7 +1,9 @@
+@import "../../styles/variables.scss";
+
 .dialogue {
   opacity: 0;
-  background-color: black;
-  color: green;
+  background-color: $darkBlue;
+  color: $green;
   padding: 12px 16px 12px 16px;
   margin: 6px 0;
 }

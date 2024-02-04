@@ -1,13 +1,12 @@
-.choices-container {
-  margin-top: 50px;
-}
-
+@import "./variables.scss";
 body {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $background;
+  color: $green;
 }
 main {
   max-width: 500px;
