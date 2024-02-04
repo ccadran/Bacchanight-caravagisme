@@ -1,78 +1,12 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Dialogues from "../../components/Dialogues/dialogues";
 import dataSebastien from "../../../data/sebastien.json";
-import Dialogue from "../../components/Dialogue/dialogue";
+import Layout from "../../components/Layout/layout";
 
-export default function Page() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [showChoices, setShowChoices] = useState(false);
-
-  useEffect(() => {
-    const audioElement = document.getElementById("audioElement");
-
-    if (audioElement) {
-      const handleAudioEnd = () => {
-        setShowChoices(true);
-      };
-
-      audioElement.addEventListener("ended", handleAudioEnd);
-
-      return () => {
-        audioElement.removeEventListener("ended", handleAudioEnd);
-      };
-    }
-  }, [currentIndex]);
-
-  const handleChoiceClick = (switchToGame) => {
-    if (switchToGame) {
-      console.log("Switching to game:", switchToGame);
-    } else {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-      setShowChoices(false);
-      audioElement.play();
-    }
-  };
-
-  useEffect(() => {
-    console.log(currentIndex, dataSebastien.intro[currentIndex].audio);
-  }, []);
-
+export default function () {
   return (
-    <div className="dialogues">
-      {currentIndex < dataSebastien.intro.length && (
-        <>
-          <div className="dialogues-container">
-            {dataSebastien.intro[currentIndex].text.map((line, index) => (
-              <Dialogue key={index} dialogue={line} />
-            ))}
-          </div>
-          <div className="choices-container">
-            {showChoices &&
-              dataSebastien.intro[currentIndex].choices &&
-              dataSebastien.intro[currentIndex].choices.map((choice, index) => (
-                <a
-                  key={index}
-                  onClick={() => handleChoiceClick(choice.switchToGame)}
-                  href={
-                    choice.switchToGame
-                      ? `/experience/sebastien/${choice.switchToGame}`
-                      : undefined
-                  }
-                >
-                  {choice.proposition}
-                </a>
-              ))}
-          </div>
-
-          <audio
-            id="audioElement"
-            src={`${dataSebastien.intro[currentIndex].audio}.mp3`}
-            controls
-            autoPlay
-          ></audio>
-        </>
-      )}
-    </div>
+    <Layout>
+      <Dialogues data={dataSebastien.intro} />
+    </Layout>
   );
 }

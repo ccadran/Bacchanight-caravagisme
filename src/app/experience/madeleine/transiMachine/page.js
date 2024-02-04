@@ -6,7 +6,7 @@ import Layout from "../../../components/Layout/layout";
 export default function () {
   return (
     <Layout>
-      <Dialogues data={dataMadeleine.transition} />
+      <Dialogues data={dataMadeleine.machine} />
     </Layout>
   );
 }

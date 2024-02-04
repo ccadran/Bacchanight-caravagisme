@@ -105,11 +105,7 @@ export default function Page({ data }) {
               <a
                 key={index}
                 onClick={() => handleChoiceClick(choice.switchToGame)}
-                href={
-                  choice.switchToGame
-                    ? `/experience/${choice.switchToGame}`
-                    : undefined
-                }
+                href={choice.switchToGame ? choice.switchToGame : undefined}
               >
                 {choice.proposition}
               </a>

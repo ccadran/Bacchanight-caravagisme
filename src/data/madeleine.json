@@ -10,7 +10,7 @@
       "choices": [
         {
           "proposition": "J'y suis ",
-          "switchToGame": "colorPicker"
+          "switchToGame": "/experience/madeleine/Games/colorPicker"
         }
       ],
       "audio": "/audios/intro/2"
@@ -27,7 +27,7 @@
       "choices": [
         {
           "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "puzzle"
+          "switchToGame": "/experience/madeleine/Games/puzzle"
         }
       ],
       "audio": "/audios/intro/2"
@@ -44,7 +44,7 @@
       "choices": [
         {
           "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "machine"
+          "switchToGame": "/experience/madeleine/machine"
         }
       ],
       "audio": "/audios/intro/2"

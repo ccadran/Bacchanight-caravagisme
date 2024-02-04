@@ -10,7 +10,7 @@
       "choices": [
         {
           "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "colorPicker"
+          "switchToGame": "/experience/sebastien/Games/light"
         }
       ],
       "audio": "/audios/intro/2"
@@ -27,7 +27,7 @@
       "choices": [
         {
           "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "puzzle"
+          "switchToGame": "experience/sebastien/Games/switch"
         }
       ],
       "audio": "/audios/intro/2"
@@ -44,7 +44,7 @@
       "choices": [
         {
           "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "machine"
+          "switchToGame": "experience/sebastien/machine"
         }
       ],
       "audio": "/audios/intro/2"
