@@ -23,6 +23,24 @@
       "color": "#EDFF1F",
       "img": "/images/colorPicker/yellow.png",
       "isCorrect": false
+    },
+    {
+      "colorName": "grey",
+      "color": "#696969",
+      "img": "/images/colorPicker/grey.png",
+      "isCorrect": false
+    },
+    {
+      "colorName": "purple",
+      "color": "#5A0090",
+      "img": "/images/colorPicker/purple.png",
+      "isCorrect": false
+    },
+    {
+      "colorName": "pink",
+      "color": "#FA00E1",
+      "img": "/images/colorPicker/pink.png",
+      "isCorrect": false
     }
   ]
 }
