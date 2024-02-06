@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 90%;
+    row-gap: 4px;
+    column-gap: 4px;
+}
+
+.tile:first-child {
+    object-fit: contain;
+    position: relative;
+}
+  
