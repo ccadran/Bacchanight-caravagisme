@@ -1,0 +1,25 @@
+.choices {
+  display: flex;
+  justify-content: space-between;
+  .choice {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      color: white;
+    }
+    .color {
+      height: 20px;
+      width: 30px;
+    }
+  }
+}
+
+.paintingContainer {
+  height: 50%;
+  width: 100%;
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}

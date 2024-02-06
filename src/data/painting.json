@@ -3,26 +3,26 @@
     {
       "colorName": "red",
       "color": "#FA0000",
-      "img": "/images/madleiene/red",
-      "state": "true"
+      "img": "/images/colorPicker/red.png",
+      "isCorrect": true
     },
     {
       "colorName": "green",
       "color": "#00970F",
-      "img": "/images/madleiene/green",
-      "state": "false"
+      "img": "/images/colorPicker/green.png",
+      "isCorrect": false
     },
     {
       "colorName": "blue",
       "color": "#001897",
-      "img": "/images/madleiene/blue",
-      "state": "false"
+      "img": "/images/colorPicker/blue.png",
+      "isCorrect": false
     },
     {
       "colorName": "yellow",
       "color": "#EDFF1F",
-      "img": "/images/madleiene/yellow",
-      "state": "false"
+      "img": "/images/colorPicker/yellow.png",
+      "isCorrect": false
     }
   ]
 }

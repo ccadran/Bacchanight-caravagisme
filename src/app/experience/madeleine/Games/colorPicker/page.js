@@ -8,17 +8,67 @@ import styles from "./colorPicker.module.scss";
 
 export default function page() {
   const data = Data.madeleine;
-  const [currentColor, setCurrentColor] = useState();
-  console.log(data);
+  const [currentColor, setCurrentColor] = useState(data[0]);
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+  // console.log(currentColor);
+
+  const handleColorClick = (color) => {
+    setCurrentColor(color);
+    setShowAnswer(false);
+  };
+
+  const handleValidationClick = (color) => {
+    setShowAnswer(true);
+    if (color.isCorrect) {
+      setIsCorrect(true);
+    }
+  };
+
   return (
     <LayoutNav>
       <div className={styles.consignes}>
         <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
       </div>
       <div className={styles.paintingContainer}>
-        <img src="" alt="" />
+        <img src={currentColor.img} alt="" />
       </div>
-      <Link href="/experience/madeleine/transiSlider">navigate to transi</Link>
+      <div className={styles.choices}>
+        {data.map((color, index) => (
+          <div
+            onClick={() => handleColorClick(color)}
+            className={styles.choice}
+            key={index}
+          >
+            <div
+              className={styles.color}
+              style={{ backgroundColor: color.color }}
+            ></div>
+            <h4>{color.colorName}</h4>
+          </div>
+        ))}
+      </div>
+      <div className={styles.answer}>
+        {showAnswer &&
+          (currentColor.isCorrect ? (
+            <p>Bonne réponse</p>
+          ) : (
+            <p>Mauvaise réponse</p>
+          ))}
+      </div>
+      <div className={styles.validation}>
+        {isCorrect ? (
+          <Link href="/experience/madeleine/transiSlider">
+            <p>Suivant</p>
+          </Link>
+        ) : (
+          <button onClick={() => handleValidationClick(currentColor)}>
+            Valider
+          </button>
+        )}
+      </div>
+
+      {/* <Link href="/experience/madeleine/transiSlider">navigate to transi</Link> */}
     </LayoutNav>
   );
 }
