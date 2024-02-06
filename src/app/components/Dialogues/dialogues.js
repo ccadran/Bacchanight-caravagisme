@@ -133,7 +133,7 @@ export default function Page({ data }) {
           <audio
             id="audioElement"
             src={`${data[currentIndex].audio}.mp3`}
-            controls
+            // controls
             autoPlay
           ></audio>
         </>

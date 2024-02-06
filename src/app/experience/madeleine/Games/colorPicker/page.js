@@ -27,7 +27,12 @@ export default function page() {
 
   return (
     <LayoutNav>
+      {/* <div className={styles.colorPicker}> */}
+
       <div className={styles.consignes}>
+        <div className={styles.avatarContainer}>
+          <img src="" alt="" />
+        </div>
         <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
       </div>
       <div className={styles.paintingContainer}>
@@ -37,7 +42,9 @@ export default function page() {
         {data.map((color, index) => (
           <div
             onClick={() => handleColorClick(color)}
-            className={styles.choice}
+            className={`${styles.choice} ${
+              currentColor === color ? styles.active : ""
+            }`}
             key={index}
           >
             <div
@@ -69,6 +76,7 @@ export default function page() {
       </div>
 
       {/* <Link href="/experience/madeleine/transiSlider">navigate to transi</Link> */}
+      {/* </div> */}
     </LayoutNav>
   );
 }
