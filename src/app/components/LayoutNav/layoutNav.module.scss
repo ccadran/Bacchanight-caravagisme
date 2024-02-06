@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+}
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  .controller {
+    display: flex;
+    .volume {
+      margin-left: 26px;
+    }
+  }
+}

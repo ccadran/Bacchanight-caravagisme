@@ -1,0 +1,28 @@
+{
+  "madeleine": [
+    {
+      "colorName": "red",
+      "color": "#FA0000",
+      "img": "/images/madleiene/red",
+      "state": "true"
+    },
+    {
+      "colorName": "green",
+      "color": "#00970F",
+      "img": "/images/madleiene/green",
+      "state": "false"
+    },
+    {
+      "colorName": "blue",
+      "color": "#001897",
+      "img": "/images/madleiene/blue",
+      "state": "false"
+    },
+    {
+      "colorName": "yellow",
+      "color": "#EDFF1F",
+      "img": "/images/madleiene/yellow",
+      "state": "false"
+    }
+  ]
+}
