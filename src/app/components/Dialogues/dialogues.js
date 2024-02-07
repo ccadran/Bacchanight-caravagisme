@@ -11,6 +11,11 @@ export default function Page({ data }) {
   const dialoguesContainerRef = useRef(null);
 
   useEffect(() => {
+    // Reset scroll position to 0 when currentIndex changes
+    dialoguesContainerRef.current.scrollTop = 0;
+  }, [currentIndex]);
+
+  useEffect(() => {
     const audioElement = document.getElementById("audioElement");
 
     if (audioElement) {
@@ -97,6 +102,11 @@ export default function Page({ data }) {
   };
 
   const renderChoices = () => {
+    const choiceClass =
+      data[currentIndex].choices.length > 1
+        ? styles.multipleChoice
+        : styles.singleChoice;
+
     if (showChoices) {
       return (
         <div className={styles.choicesContainer}>
@@ -104,6 +114,7 @@ export default function Page({ data }) {
             data[currentIndex].choices.map((choice, index) => (
               <a
                 key={index}
+                className={choiceClass}
                 onClick={() => handleChoiceClick(choice.switchToGame)}
                 href={choice.switchToGame ? choice.switchToGame : undefined}
               >
