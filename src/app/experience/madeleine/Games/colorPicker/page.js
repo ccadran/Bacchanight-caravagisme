@@ -51,7 +51,6 @@ export default function page() {
               className={styles.color}
               style={{ backgroundColor: color.color }}
             ></div>
-            {/* <h4>{color.colorName}</h4> */}
           </div>
         ))}
       </div>

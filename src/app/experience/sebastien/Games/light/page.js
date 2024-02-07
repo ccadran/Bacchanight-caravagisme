@@ -1,11 +1,81 @@
-import Link from "next/link";
-import React from "react";
+"use client";
 
+import Link from "next/link";
+import React, { useRef, useState } from "react";
+import LayoutNav from "../../../../components/LayoutNav/layoutNav";
+import styles from "./light.module.scss";
+import gsap from "gsap";
 export default function page() {
+  const crossRef = useRef(null);
+  const [showCross, setShowCross] = useState(false);
+  const [isLight, setIsLight] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+  const [showAnswer, setShowAnswer] = useState(false);
+
+  const handleClick = (state) => {
+    console.log("light");
+    setShowAnswer(false);
+    if (state) {
+      setIsLight(true);
+    } else {
+      setIsLight(false);
+    }
+  };
+  const handleValidationClick = () => {
+    console.log("validation");
+    if (isLight) {
+      setIsCorrect(true);
+    } else {
+      setIsCorrect(false);
+    }
+    setShowAnswer(true);
+  };
+
+  const handleGlobalClick = (e) => {
+    setShowCross(true);
+    console.log(e);
+    gsap.to(crossRef.current, {
+      left: e.clientX,
+      top: e.clientY,
+      opacity: 1,
+      duration: 0.3,
+    });
+  };
   return (
-    <>
-      <div>colorpicker</div>
-      <Link href="/experience/madeleine/transiSlider">navigate to transi</Link>
-    </>
+    <LayoutNav>
+      <div
+        className={styles.imageContainer}
+        style={{
+          background: isCorrect
+            ? `url("/images/ColorPicker/red.png") center/cover`
+            : `url("/images/ColorPicker/green.png") center/cover`,
+        }}
+        onClick={(e) => handleGlobalClick(e)}
+      >
+        <div className={styles.case} onClick={() => handleClick(false)}></div>
+        <div className={styles.case} onClick={() => handleClick(true)}></div>
+        <div className={styles.case} onClick={() => handleClick(false)}></div>
+        <div className={styles.case} onClick={() => handleClick(false)}></div>
+        <div className={styles.case} onClick={() => handleClick(false)}></div>
+        <div className={styles.case} onClick={() => handleClick(false)}></div>
+
+        <div className={styles.cross} ref={crossRef}>
+          <img src="/icons/cross.svg" alt="" />
+        </div>
+      </div>
+      <div className={styles.answer}>
+        {showAnswer &&
+          (isCorrect ? <p>Bonne réponse</p> : <p>Mauvaise réponse</p>)}
+      </div>
+      <div className={styles.validation}>
+        {isCorrect ? (
+          <Link href="/experience/madeleine/transiSlider">
+            <p>Suivant</p>
+          </Link>
+        ) : (
+          <button onClick={() => handleValidationClick()}>Valider</button>
+        )}
+      </div>
+    </LayoutNav>
   );
 }
