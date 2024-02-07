@@ -11,6 +11,14 @@ body {
 main {
   max-width: 500px;
 }
+p {
+  font-family: $body;
+  font-size: 16px;
+}
+h4 {
+  font-family: $body;
+  font-size: 14px;
+}
 
 * {
   margin: 0;
