@@ -9,6 +9,7 @@ export default function Machine() {
   const indicatorRef = useRef(null);
   const [currentLevel, setCurrentLevel] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
+  const [isColide, setIsColide] = useState(false);
   const levels = [{ width: 100 }, { width: 60 }, { width: 40 }];
 
   // console.log("currentLevel", currentLevel);
@@ -21,32 +22,25 @@ export default function Machine() {
     const indicator = indicatorRef.current.getBoundingClientRect();
     if (movingBar.left < indicator.right && movingBar.right > indicator.left) {
       console.log("collision");
+      setIsColide(true);
       setIsAnimating(false);
-      // if (currentLevel === levels.length - 1) {
-      //   console.log("end");
-      // } else {
-      //   setCurrentLevel + 1;
-      // }
-      // if (currentLevel < levels.length - 1) {
-      //   setCurrentLevel(currentLevel + 1);
-      // } else {
-      //   console.log("end");
-      // }
     }
   };
 
   const handleRestart = () => {
     if (currentLevel < levels.length - 1) {
       setCurrentLevel(currentLevel + 1);
+      setIsColide(false);
+      setIsAnimating(true);
+      setBarOnPlace();
     } else {
       console.log("end");
     }
-    setIsAnimating(true);
   };
 
   const movingLeft = () => {
     gsap.to(movingBarRef.current, {
-      left: `calc(100% - ${levels[currentLevel].width}px)`,
+      left: "0%",
       duration: 2,
       ease: "none",
       onComplete: () => {
@@ -54,10 +48,15 @@ export default function Machine() {
       },
     });
   };
+  const setBarOnPlace = () => {
+    gsap.set(movingBarRef.current, {
+      left: `5%`,
+    });
+  };
 
   const movingRight = () => {
     gsap.to(movingBarRef.current, {
-      left: "0%",
+      left: `calc(100% - ${levels[currentLevel].width}px)`,
       duration: 2,
       ease: "none",
       onComplete: () => {
@@ -66,22 +65,26 @@ export default function Machine() {
     });
   };
 
+  // window.addEventListener("click", () => {
+  //   if (isAnimating) {
+  //     handleStop();
+  //   } else {
+  //     handleRestart();
+  //   }
+  // });
+
   useEffect(() => {
     if (isAnimating) {
       movingRight();
     } else {
-      gsap.killTweensOf(movingBarRef.current); // Cela arrêtera l'animation en cours
+      gsap.killTweensOf(movingBarRef.current); // Arrête l'animation en cours
     }
   }, [isAnimating, currentLevel]);
 
   return (
     <div className={styles.gameTiming}>
       <div className={styles.consignes}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-          dolor. Eum, et? Necessitatibus recusandae, ipsam praesentium maiores
-          tenetur impedit, omnis molestias, nam dicta sapiente quas.
-        </p>
+        <p></p>
       </div>
       <div className={styles.game}>
         <div className={styles.mainBar}>
@@ -95,6 +98,16 @@ export default function Machine() {
           <div ref={indicatorRef} className={styles.indicator}></div>
         </div>
       </div>
+
+      {isColide && (
+        <div className="answer">
+          {currentLevel === 0
+            ? "Bravo tu as réussi l'étape 1 passe à l'étape 2 en cliquant sur l'écran "
+            : currentLevel === 1
+            ? "Bravo tu as réussi l'étape 2 passe à l'étape 3 en cliquant sur l'écran "
+            : "Bravo tu as réussi l'étape 3 passe à la suite en cliquant sur l'écran "}
+        </div>
+      )}
 
       <div className={styles.stop}>
         <button onClick={() => handleStop()}>STOP</button>
