@@ -1,0 +1,25 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    max-width: 100%;
+    row-gap: 4px;
+    column-gap: 4px;
+    width: 600px;
+}
+
+@media screen and (min-width: 560px) {
+    .wrapper {
+        column-gap: 4px;
+        max-width: 500px;
+    }
+}
+
+.tile:first-child {
+    object-fit: contain;
+    position: relative;
+}
+
+.link {
+    color: white;
+}
