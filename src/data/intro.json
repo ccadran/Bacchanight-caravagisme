@@ -12,6 +12,9 @@
       "choices": [
         {
           "proposition": "Je me demande surtout qui tu es ! "
+        },
+        {
+          "proposition": "Je me demande surtout qui tu es ! "
         }
       ],
       "audio": "/audios/intro/1"

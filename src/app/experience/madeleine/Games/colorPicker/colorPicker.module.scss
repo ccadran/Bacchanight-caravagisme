@@ -74,8 +74,11 @@
     height: 100%;
     font-size: 16px;
     color: $darkBlue;
+    font-family: $body;
   }
   a {
+    font-family: $body;
+
     display: block;
     font-size: 16px;
     text-align: center;
