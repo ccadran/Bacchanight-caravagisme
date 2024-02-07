@@ -73,7 +73,7 @@ export default function Page({ data }) {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = dialoguesContainerRef.current.scrollTop;
-      console.log("Scroll position:", scrollPosition);
+      // console.log("Scroll position:", scrollPosition);
 
       // Your scroll event handling logic here
     };
@@ -88,7 +88,7 @@ export default function Page({ data }) {
 
   const handleChoiceClick = (switchToGame) => {
     if (switchToGame) {
-      console.log("Switching to game:", switchToGame);
+      // console.log("Switching to game:", switchToGame);
     } else {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setShowChoices(false);

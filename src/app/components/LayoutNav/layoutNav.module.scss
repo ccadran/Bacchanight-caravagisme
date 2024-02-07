@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   height: 100vh;
   width: 100%;
 }
@@ -9,8 +8,11 @@
   display: flex;
   justify-content: space-between;
   height: 5vh;
+  margin: 0 12px;
+  align-items: center;
   .controller {
     display: flex;
+    align-items: center;
     .volume {
       margin-left: 26px;
     }

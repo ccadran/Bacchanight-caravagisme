@@ -10,10 +10,16 @@ export default function RootLayout({ children }) {
     <main className={styles.main}>
       <div className={styles.infosContainer}>
         <div className={styles.navContainer}>
-          <h4>signal faible</h4>
+          <h4>SIGNAL FAIBLE</h4>
           <div className={styles.controller}>
-            <p>Batterie</p>
-            <p className={styles.volume}>volume</p>
+            <div className={styles.imgContainer}>
+              <img src="/icons/battery.svg" alt="" />
+            </div>
+            <p className={styles.volume}>
+              <div className={styles.imgContainer}>
+                <img src="/icons/song-off.svg" alt="" />
+              </div>
+            </p>
           </div>
         </div>
       </div>
