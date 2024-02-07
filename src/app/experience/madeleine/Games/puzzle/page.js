@@ -1,5 +1,5 @@
 'use client';
-import { useState, React } from 'react';
+import { useState, useEffect, React } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -8,45 +8,85 @@ import styles from './puzzle.module.scss';
 import ImageTile from '@/app/components/Tile/tile.js';
 
 export default function page() {
-  const tiles = [
-    { src: '/images/puzzle/tile1.png', alt: 'Puzzle tile 1', initRotation: 0 },
-    { src: '/images/puzzle/tile2.png', alt: 'Puzzle tile 2', initRotation: 90 },
+  const defaultTiles = [
+    {
+      src: '/images/puzzle/tile1.png',
+      alt: 'Puzzle tile 1',
+      rotation: 360,
+    },
+    {
+      src: '/images/puzzle/tile2.png',
+      alt: 'Puzzle tile 2',
+      rotation: 90,
+    },
     {
       src: '/images/puzzle/tile3.png',
       alt: 'Puzzle tile 3',
-      initRotation: 180,
+      rotation: 180,
     },
     {
       src: '/images/puzzle/tile4.png',
       alt: 'Puzzle tile 4',
-      initRotation: 270,
+      rotation: 270,
     },
     {
       src: '/images/puzzle/tile5.png',
       alt: 'Puzzle tile 5',
-      initRotation: 270,
+      rotation: 270,
     },
     {
       src: '/images/puzzle/tile6.png',
       alt: 'Puzzle tile 6',
-      initRotation: 270,
+      rotation: 270,
     },
     {
       src: '/images/puzzle/tile7.png',
       alt: 'Puzzle tile 7',
-      initRotation: 180,
+      rotation: 180,
     },
     {
       src: '/images/puzzle/tile8.png',
       alt: 'Puzzle tile 8',
-      initRotation: 0,
+      rotation: 360,
     },
     {
       src: '/images/puzzle/tile9.png',
       alt: 'Puzzle tile 9',
-      initRotation: 90,
+      rotation: 90,
     },
   ];
+
+  const handleClick = (index) => {
+    const nextTiles = tiles.map((tile, i) => {
+      if (index === i) {
+        return {
+          ...tile,
+          rotation: tile.rotation === 360 ? 90 : tile.rotation + 90,
+        };
+      } else {
+        return tile;
+      }
+    });
+    setTiles(nextTiles);
+  };
+
+  const isPuzzleSolved = () => {
+    let solvedTiles = 0;
+    for (let i = 0; i < tiles.length; i++) {
+      if (tiles[i].rotation === 0 || tiles[i].rotation === 360) {
+        solvedTiles++;
+      }
+    }
+    if (solvedTiles === tiles.length) {
+      return true;
+    }
+  };
+
+  const [tiles, setTiles] = useState(defaultTiles);
+
+  useEffect(() => {
+    isPuzzleSolved();
+  }, [tiles]);
 
   return (
     <>
@@ -56,11 +96,16 @@ export default function page() {
             key={index}
             src={tile.src}
             alt={tile.alt}
-            initRotation={tile.initRotation}
+            rotation={tile.rotation}
+            handleClick={() => handleClick(index)}
           />
         ))}
       </div>
-      <Link href="/experience/madeleine/machine">navigate to machine</Link>
+      {isPuzzleSolved() && (
+        <Link className={styles.link} href="/experience/madeleine/machine">
+          navigate to machine
+        </Link>
+      )}
     </>
   );
 }
