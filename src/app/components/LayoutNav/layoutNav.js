@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./layoutNav.module.scss";
 
 export const metadata = {
@@ -6,6 +9,23 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [isMuted, setIsMuted] = useState(false);
+
+  const toggleMute = () => {
+    console.log("test");
+    setIsMuted(!isMuted);
+    if (isMuted) {
+      // Activer le son
+      document.querySelectorAll("audio").forEach((audio) => {
+        audio.volume = 1;
+      });
+    } else {
+      // Couper le son
+      document.querySelectorAll("audio").forEach((audio) => {
+        audio.volume = 0;
+      });
+    }
+  };
   return (
     <main className={styles.main}>
       <div className={styles.infosContainer}>
@@ -15,11 +35,15 @@ export default function RootLayout({ children }) {
             <div className={styles.imgContainer}>
               <img src="/icons/battery.svg" alt="" />
             </div>
-            <p className={styles.volume}>
-              <div className={styles.imgContainer}>
-                <img src="/icons/song-off.svg" alt="" />
-              </div>
-            </p>
+            <div
+              className={`${styles.volume} ${styles.imgContainer}`}
+              onClick={() => toggleMute()}
+            >
+              <img
+                src={isMuted ? "/icons/sound-off.svg" : "/icons/sound-on.svg"}
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
