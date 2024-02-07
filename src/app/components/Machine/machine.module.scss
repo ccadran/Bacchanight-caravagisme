@@ -10,11 +10,10 @@
     position: relative;
     .movingBar {
       height: 80px;
-      width: 60px;
+      width: 80px;
       background-color: green;
       position: absolute;
-      transform: translate(-100%, 0);
-      left: 12%;
+      left: 0;
     }
     .indicator {
       height: 80px;
