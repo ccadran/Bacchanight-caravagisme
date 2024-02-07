@@ -43,6 +43,12 @@ export default function page() {
   };
   return (
     <LayoutNav>
+      <div className={styles.consignes}>
+        <div className={styles.avatarContainer}>
+          <img src="" alt="" />
+        </div>
+        <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
+      </div>
       <div
         className={styles.imageContainer}
         style={{
