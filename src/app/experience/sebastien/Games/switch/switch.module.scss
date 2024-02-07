@@ -1,0 +1,17 @@
+// .container {
+//     max-width: 300px;
+// }
+
+.slider {
+    overflow-x: auto;
+    width: 500px;
+    display: flex;
+    gap: 7px;
+    scroll-snap-type: x mandatory;
+}
+
+.slide {
+    scroll-snap-align: center;
+    display: inline-block;
+    width: 100vw;
+}

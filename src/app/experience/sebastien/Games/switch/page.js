@@ -1,55 +1,56 @@
 'use client';
-import React from 'react';
-import Slider from 'react-slick';
-
+import { useState, React } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import styles from './switch.module.scss';
+
 export default function page() {
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleScroll = (event) => {
+    const slider = event.target;
+    const newIndex = Math.round(slider.scrollLeft / slider.offsetWidth);
+    setCurrentIndex(newIndex);
   };
+
   return (
-    <>
-      <Slider {...settings}>
-        <div>
+    <div className={styles.container}>
+      <div className={styles.slider} onScroll={handleScroll}>
+        <div className={styles.slide}>
           <Image
             src={'/images/sebastien/LIVRE.png'}
-            width={650}
-            height={500}
-            alt={'Slide 1'}
+            width={500}
+            height={375}
+            alt="Slide image 1"
           />
         </div>
-        <div>
+        <div className={styles.slide}>
           <Image
             src={'/images/sebastien/FIOLE.png'}
-            width={650}
-            height={500}
-            alt={'Slide 2'}
+            width={500}
+            height={375}
+            alt="Slide image 2"
           />
         </div>
-        <div>
+        <div className={styles.slide}>
           <Image
             src={'/images/sebastien/FLECHE.png'}
-            width={650}
-            height={500}
-            alt={'Slide 3'}
+            width={500}
+            height={375}
+            alt="Slide image 3"
           />
         </div>
-        <div>
+        <div className={styles.slide}>
           <Image
             src={'/images/sebastien/POMME.png'}
-            width={650}
-            height={500}
-            alt={'Slide 1'}
+            width={500}
+            height={375}
+            alt="Slide image 4"
           />
         </div>
-      </Slider>
-
+      </div>
       <Link href="/experience/madeleine/machine">navigate to machine</Link>
-    </>
+    </div>
   );
 }
