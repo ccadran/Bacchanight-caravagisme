@@ -1,57 +1,58 @@
-'use client';
-import { useState, useEffect, React } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
+import { useState, useEffect, React } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 
-import styles from './puzzle.module.scss';
+import styles from "./puzzle.module.scss";
 
-import ImageTile from '@/app/components/Tile/tile.js';
+import ImageTile from "@/app/components/Tile/tile.js";
 
 export default function page() {
   const defaultTiles = [
     {
-      src: '/images/puzzle/tile1.png',
-      alt: 'Puzzle tile 1',
+      src: "/images/puzzle/tile1.png",
+      alt: "Puzzle tile 1",
       rotation: 360,
     },
     {
-      src: '/images/puzzle/tile2.png',
-      alt: 'Puzzle tile 2',
+      src: "/images/puzzle/tile2.png",
+      alt: "Puzzle tile 2",
       rotation: 90,
     },
     {
-      src: '/images/puzzle/tile3.png',
-      alt: 'Puzzle tile 3',
+      src: "/images/puzzle/tile3.png",
+      alt: "Puzzle tile 3",
       rotation: 180,
     },
     {
-      src: '/images/puzzle/tile4.png',
-      alt: 'Puzzle tile 4',
+      src: "/images/puzzle/tile4.png",
+      alt: "Puzzle tile 4",
       rotation: 270,
     },
     {
-      src: '/images/puzzle/tile5.png',
-      alt: 'Puzzle tile 5',
+      src: "/images/puzzle/tile5.png",
+      alt: "Puzzle tile 5",
       rotation: 270,
     },
     {
-      src: '/images/puzzle/tile6.png',
-      alt: 'Puzzle tile 6',
+      src: "/images/puzzle/tile6.png",
+      alt: "Puzzle tile 6",
       rotation: 270,
     },
     {
-      src: '/images/puzzle/tile7.png',
-      alt: 'Puzzle tile 7',
+      src: "/images/puzzle/tile7.png",
+      alt: "Puzzle tile 7",
       rotation: 180,
     },
     {
-      src: '/images/puzzle/tile8.png',
-      alt: 'Puzzle tile 8',
+      src: "/images/puzzle/tile8.png",
+      alt: "Puzzle tile 8",
       rotation: 360,
     },
     {
-      src: '/images/puzzle/tile9.png',
-      alt: 'Puzzle tile 9',
+      src: "/images/puzzle/tile9.png",
+      alt: "Puzzle tile 9",
       rotation: 90,
     },
   ];
@@ -89,23 +90,34 @@ export default function page() {
   }, [tiles]);
 
   return (
-    <>
-      <div className={styles.wrapper}>
-        {tiles.map((tile, index) => (
-          <ImageTile
-            key={index}
-            src={tile.src}
-            alt={tile.alt}
-            rotation={tile.rotation}
-            handleClick={() => handleClick(index)}
-          />
-        ))}
+    <LayoutNav>
+      <div className={styles.puzzleContainer}>
+        <div className={styles.consignes}>
+          <div className={styles.avatarContainer}>
+            <img src="" alt="" />
+          </div>
+          <p>
+            Remet le tableau en ordre en cliquant sur les pièces pour les faire
+            tourner.
+          </p>
+        </div>
+        <div className={styles.puzzle}>
+          {tiles.map((tile, index) => (
+            <ImageTile
+              key={index}
+              src={tile.src}
+              alt={tile.alt}
+              rotation={tile.rotation}
+              handleClick={() => handleClick(index)}
+            />
+          ))}
+        </div>
+        {isPuzzleSolved() && (
+          <Link className={styles.link} href="/experience/madeleine/machine">
+            navigate to machine
+          </Link>
+        )}
       </div>
-      {isPuzzleSolved() && (
-        <Link className={styles.link} href="/experience/madeleine/machine">
-          navigate to machine
-        </Link>
-      )}
-    </>
+    </LayoutNav>
   );
 }

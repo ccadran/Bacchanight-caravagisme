@@ -105,7 +105,10 @@ export default function Machine({ link }) {
         <div className={styles.avatarContainer}>
           <img src="" alt="" />
         </div>
-        <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
+        <p>
+          Appuie lorsque les curseurs se trouvent dans la zone verte pour lancer
+          la machine.
+        </p>
       </div>
       <div className={styles.game}>
         <div className={styles.mainBar}>

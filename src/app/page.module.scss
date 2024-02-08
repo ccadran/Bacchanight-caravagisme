@@ -1,0 +1,47 @@
+@import "./styles/variables.scss";
+
+.phone {
+  margin-top: 5vh;
+  width: 100%;
+  height: 80%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  width: 85%;
+  margin: 5vh auto 0 auto;
+  p {
+    text-align: center;
+  }
+}
+
+.start {
+  width: fit-content;
+  font-family: $body;
+  display: block;
+  font-size: 16px;
+  padding: 24px 12px;
+  margin: 5vh auto;
+  width: 50%;
+  text-align: center;
+  background-color: $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: $darkBlue;
+  }
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+  a {
+    border-bottom: 1px solid $green;
+  }
+}

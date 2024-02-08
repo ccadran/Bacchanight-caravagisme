@@ -47,7 +47,10 @@ export default function page() {
         <div className={styles.avatarContainer}>
           <img src="" alt="" />
         </div>
-        <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
+        <p>
+          A l’aide de ton doigt place la source de lumière en cliquant sur
+          l’image.
+        </p>
       </div>
       <div
         className={styles.imageContainer}
