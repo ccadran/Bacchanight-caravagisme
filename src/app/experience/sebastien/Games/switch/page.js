@@ -39,6 +39,13 @@ export default function Page() {
     }
   };
 
+  const handleValidation = () => {
+    if (clicked && currentIndex === 2) {
+      return true;
+    }
+    return false;
+  };
+
   const scrollPrev = () => {
     if (sliderRef.current) {
       const { scrollLeft, offsetWidth } = sliderRef.current;
@@ -51,20 +58,6 @@ export default function Page() {
         });
         handleScroll();
       }
-    }
-  };
-
-  const handleValidation = () => {
-    if (clicked) {
-      setClicked(true);
-      if (currentIndex != 2) {
-        return false;
-      } else {
-        return true;
-      }
-    } else {
-      setClicked(false);
-      return false;
     }
   };
 
@@ -117,9 +110,9 @@ export default function Page() {
       <button className={styles.button} onClick={handleValidation}>
         Valider
       </button>
-      {handleValidation === true ? (
+      {handleValidation() && (
         <Link href="/experience/madeleine/machine">navigate to machine</Link>
-      ) : null}
+      )}
     </div>
   );
 }
