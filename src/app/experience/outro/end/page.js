@@ -12,12 +12,12 @@ export default function page() {
     <LayoutNav>
       <div className={styles.end}>
         <div className={styles.endPhrase}>
-          {search === "1"
+          {search === "2"
             ? "Bravo d'avoir aidé"
-            : "Vous avec laissé la censur gagné"}
+            : "Vous avec laissé la censure gagner"}
         </div>
         <div className={styles.otherEnd}>
-          {search === "1" ? (
+          {search === "2" ? (
             <Link href={`/experience/outro/otherEnd?index=3`}>
               Découvrir l'autre fin
             </Link>

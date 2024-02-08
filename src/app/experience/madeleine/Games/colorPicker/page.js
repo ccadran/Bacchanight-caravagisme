@@ -64,7 +64,7 @@ export default function page() {
       </div>
       <div className={styles.validation}>
         {isCorrect ? (
-          <Link href="/experience/madeleine/transiSlider">
+          <Link href="/experience/outro">
             <p>Suivant</p>
           </Link>
         ) : (

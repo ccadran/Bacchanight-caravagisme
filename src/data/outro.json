@@ -3,10 +3,10 @@
     {
       "id": 1,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
+        "Bravo! Quel œil, on touche au but, il n'y a plus qu'à activer la machine, et je pourrai repartir sauver les 2 t",
+        "POLICE, OUVREZ LA PORTE, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR”",
+        "Zut, on a de la compagnie, il faut se dépêcher.",
+        "Vous êtes en état d’arrestation, identifiez-vous maintenant, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR. Mes collègues sont en route”",
         "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
       ],
       "choices": [
@@ -14,7 +14,7 @@
           "proposition": "Vous êtes en train de voler la police?? "
         }
       ],
-      "audio": "/audios/intro/1"
+      "audio": "/audios/intro/2"
     },
     {
       "id": 2,
@@ -82,7 +82,7 @@
           "switchToGame": "/experience/outro/end?wichEnd=2"
         }
       ],
-      "audio": "/audios/intro/1"
+      "audio": "/audios/intro/2"
     }
   ]
 }

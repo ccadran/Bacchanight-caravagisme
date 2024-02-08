@@ -2,36 +2,54 @@
   "intro": [
     {
       "id": 1,
-      "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
-      ],
+      "text": ["Allo? Allo? Vous me recevez?"],
       "choices": [
         {
-          "proposition": "Je me demande surtout qui tu es ! "
-        },
-        {
-          "proposition": "Je me demande surtout qui tu es ! "
+          "proposition": "Mal… mais je vous comprends."
         }
       ],
-      "audio": "/audios/intro/1"
+      "audio": "/audios/intro/2"
     },
     {
       "id": 2,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
+        "Très bien, c’est tout ce qui compte. Je ne vis pas dans la même époque que toi, il serait trop compliqué de tout t’expliquer! ",
+        "Voilà le topo, deux peintures sur le caravagisme sont maintenues en captivité dans un hangar sécurisé, mais nous devons absolument les récupérer.",
+        " J’ai réussi à m’infiltrer mais les œuvres sont protégées, il faut que tu m’aides en m’apportant des détails concernant les tableaux pour que je puisse les libérer de leurs sceaux."
       ],
       "choices": [
         {
-          "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "/experience/madeleine"
+          "proposition": "Pourquoi je vous ferais confiance?"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+
+    {
+      "id": 2,
+      "text": [
+        "J’aurais aimé ne pas avoir à te le révéler mais je suis un agent de la CIA, c’est une mission secrète et notre temps est compté.",
+        " Le système de surveillance est hors service mais ça ne durera pas éternellement.",
+        " Commence par te diriger vers le premier tableau, tu verras un grand gaillard musclé et deux femmes se tenant à sa droite. Il doit se trouver tout prêt de l’entrée de la salle."
+      ],
+      "choices": [
+        {
+          "proposition": "J’y suis.",
+          "switchToGame": "/experience/sebastien/Games/light"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+    {
+      "id": 2,
+      "text": [
+        "Parfait ! Il faut savoir que les jeux d’ombres et de lumières du clair-obscur sont une des caractéristiques phares du mouvement créé par Michelangelo le Caravage.",
+        "Je sais que cette œuvre contient une source de lumière, seulement je n’arrive pas à savoir où elle se situe dans la composition.",
+        "A l’aide de ton doigt, place la source de lumière en cliquant sur l’image."
+      ],
+      "choices": [
+        {
+          "proposition": "Trouver la source de lumière"
         }
       ],
       "audio": "/audios/intro/2"

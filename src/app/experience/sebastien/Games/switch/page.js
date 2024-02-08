@@ -5,7 +5,7 @@ export default function page() {
   return (
     <>
       <div>puzzle</div>;
-      <Link href="/experience/madeleine/machine">navigate to machine</Link>
+      <Link href="/experience/sebastien/machine">navigate to machine</Link>
     </>
   );
 }

@@ -113,8 +113,11 @@ export default function page() {
           ))}
         </div>
         {isPuzzleSolved() && (
-          <Link className={styles.link} href="/experience/madeleine/machine">
-            navigate to machine
+          <Link
+            className={styles.link}
+            href="/experience/madeleine/transiColor"
+          >
+            navigate to transiColor
           </Link>
         )}
       </div>

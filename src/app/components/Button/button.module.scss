@@ -1,0 +1,19 @@
+@import "../../styles/variables.scss";
+
+.button {
+  width: fit-content;
+  font-family: $body;
+  display: block;
+  font-size: 16px;
+  padding: 24px 12px;
+  margin: 5vh auto;
+  width: 50%;
+  text-align: center;
+  background-color: $green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    color: $darkBlue;
+  }
+}
