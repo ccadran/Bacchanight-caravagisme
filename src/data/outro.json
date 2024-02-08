@@ -1,5 +1,5 @@
 {
-  "intro": [
+  "outro": [
     {
       "id": 1,
       "text": [
@@ -61,11 +61,28 @@
       ],
       "choices": [
         {
-          "proposition": "Lancer la machine",
-          "switchToGame": "/experience/outro/machine"
+          "proposition": "Clicker pour voir la suite",
+          "switchToGame": "/experience/outro/end"
         }
       ],
       "audio": "/audios/intro/2"
+    }
+  ],
+  "afterGame": [
+    {
+      "id": 1,
+      "text": [
+        "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+        "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+        "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide"
+      ],
+      "choices": [
+        {
+          "proposition": "Clicker pour voir la suite",
+          "switchToGame": "/experience/outro/end"
+        }
+      ],
+      "audio": "/audios/intro/1"
     }
   ]
 }

@@ -5,8 +5,8 @@ import gsap from "gsap";
 import Dialogue from "../../components/Dialogue/dialogue";
 import styles from "./dialogues.module.scss";
 
-export default function Page({ data }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export default function Page({ data, index }) {
+  const [currentIndex, setCurrentIndex] = useState(index || 0);
   const [showChoices, setShowChoices] = useState(false);
   const dialoguesContainerRef = useRef(null);
 
