@@ -6,7 +6,7 @@ import Machine from "../../../components/Machine/machine";
 export default function page() {
   return (
     <LayoutNav>
-      <Machine />
+      <Machine link={"/experience/sebastien/"} />
       <Link href="/experience/sebastien/">navigate to sebastien</Link>
     </LayoutNav>
   );

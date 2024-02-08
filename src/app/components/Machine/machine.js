@@ -3,14 +3,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import styles from "./machine.module.scss";
+import { useRouter } from "next/navigation";
 
-export default function Machine() {
+export default function Machine({ link }) {
   const movingBarRef = useRef(null);
   const indicatorRef = useRef(null);
   const [currentLevel, setCurrentLevel] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
   const [isCollide, setIsCollide] = useState(false);
-  const [nextMove, setNextMove] = useState("stop");
+  const [readyForNextStep, setReadyForNextStep] = useState(false);
+
+  const router = useRouter();
 
   const levels = [{ width: 100 }, { width: 60 }, { width: 40 }];
 
@@ -20,7 +23,9 @@ export default function Machine() {
     if (movingBar.left < indicator.right && movingBar.right > indicator.left) {
       setIsCollide(true);
       setIsAnimating(false);
-      setNextMove("restart");
+      if (currentLevel === levels.length - 1) {
+        setReadyForNextStep(true); // Indique que vous êtes prêt à passer à l'étape suivante
+      }
     }
   };
 
@@ -30,9 +35,10 @@ export default function Machine() {
       setIsCollide(false);
       setIsAnimating(true);
       setBarOnPlace();
-      setNextMove("stop");
     } else {
       console.log("end");
+      console.log("test link", link);
+      router.push(link);
     }
   };
 
@@ -81,10 +87,15 @@ export default function Machine() {
   }, [isAnimating]);
 
   const handleClick = () => {
-    if (isAnimating) {
-      handleStop();
-    } else {
-      handleRestart();
+    if (currentLevel < levels.length) {
+      if (isAnimating) {
+        handleStop();
+      } else {
+        handleRestart();
+      }
+    }
+    if (!currentLevel < levels.length - 1) {
+      // router.push(link);
     }
   };
 
