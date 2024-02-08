@@ -17,11 +17,24 @@
     }
     .indicator {
       height: 80px;
-      width: 20px;
-      background-color: red;
+      width: 5px;
+      background-color: transparent;
       position: absolute;
       transform: translate(-50%, 0);
       left: 50%;
+    }
+    .triangle {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -35px;
+    }
+    .triangleDown {
+      position: absolute;
+      // transform: ;
+      transform: translateX(-50%) rotate(180deg);
+      left: 50%;
+      bottom: -35px;
     }
   }
 }

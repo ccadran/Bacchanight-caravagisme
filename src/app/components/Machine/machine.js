@@ -103,6 +103,12 @@ export default function Machine() {
             }}
           ></div>
           <div ref={indicatorRef} className={styles.indicator}></div>
+          <div className={styles.triangle}>
+            <img src="/icons/triangle.png" alt="" />
+          </div>
+          <div className={` ${styles.triangleDown}`}>
+            <img src="/icons/triangle.png" alt="" />
+          </div>
         </div>
       </div>
 
