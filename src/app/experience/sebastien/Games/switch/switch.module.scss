@@ -1,10 +1,7 @@
-// .container {
-//     max-width: 300px;
-// }
-
 .slider {
     overflow-x: auto;
-    width: 500px;
+    max-width: 100%;
+    width: 500px; 
     display: flex;
     gap: 7px;
     scroll-snap-type: x mandatory;
@@ -12,6 +9,19 @@
 
 .slide {
     scroll-snap-align: center;
-    display: inline-block;
-    width: 100vw;
 }
+
+.image {
+    width: 500px;
+    height: auto;
+}
+
+.arrows {
+    position: static;
+}
+
+// @media screen and (max-width: 500px) {
+//     .slider {
+//         width: 400px;
+//     }
+// }
