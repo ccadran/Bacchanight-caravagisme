@@ -62,7 +62,7 @@
       "choices": [
         {
           "proposition": "Clicker pour voir la suite",
-          "switchToGame": "/experience/outro/end"
+          "switchToGame": "/experience/outro/end?wichEnd=1"
         }
       ],
       "audio": "/audios/intro/2"
@@ -79,7 +79,7 @@
       "choices": [
         {
           "proposition": "Clicker pour voir la suite",
-          "switchToGame": "/experience/outro/end"
+          "switchToGame": "/experience/outro/end?wichEnd=2"
         }
       ],
       "audio": "/audios/intro/1"
