@@ -117,7 +117,7 @@ export default function page() {
             className={styles.link}
             href="/experience/madeleine/transiColor"
           >
-            navigate to transiColor
+            Continuer{" "}
           </Link>
         )}
       </div>

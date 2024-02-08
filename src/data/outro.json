@@ -17,6 +17,21 @@
       "audio": "/audios/intro/2"
     },
     {
+      "id": 1,
+      "text": [
+        "C'est-à-dire que… la CIA dont je t’ai parlé n’est pas tout à fait celle à laquelle tu penses, en réalité nous sommes la Confédération des Intéressés de l’Art",
+        "Il est possible que je t’aie menti pour mieux te manipuler. Mais c’est pour la bonne cause crois-moi.",
+        "Aujourd’hui l’art est numérique, plus que des zéros et des un. Les œuvres d'antan sont prohibées, alors avec une bande d’amis rebelles, on essaye de faire revivre l’histoire, peu importe si ça dérange l'autorité.",
+        "On ne peut pas s’arrêter en si bon chemin, aide-moi à délivrer le dernier tableau avant que je ne me fasse attraper."
+      ],
+      "choices": [
+        {
+          "proposition": "Vous êtes en train de voler la police?? "
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+    {
       "id": 2,
       "text": [
         "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
@@ -28,11 +43,11 @@
       "choices": [
         {
           "proposition": "J’adhère à votre combat.",
-          "switchToIndex": "2"
+          "switchToIndex": "3"
         },
         {
           "proposition": "Tu t’es joué de moi, débrouille-toi.",
-          "switchToIndex": "3"
+          "switchToIndex": "4"
         }
       ],
       "audio": "/audios/intro/2"
