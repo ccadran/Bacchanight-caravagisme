@@ -54,12 +54,18 @@ export default function page() {
           </div>
         ))}
       </div>
-      <div className={styles.answer}>
+      <div className={`${styles.answer} ${showAnswer ? styles.visible : ""}`}>
         {showAnswer &&
-          (currentColor.isCorrect ? (
-            <p>Bonne réponse</p>
+          (isCorrect ? (
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>Bravo! Quel œil !</p>
+            </div>
           ) : (
-            <p>Mauvaise réponse</p>
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>Ce n’est pas la bonne teinte, il faut être minutieux </p>
+            </div>
           ))}
       </div>
       <div className={styles.validation}>
@@ -73,9 +79,6 @@ export default function page() {
           </button>
         )}
       </div>
-
-      {/* <Link href="/experience/madeleine/transiSlider">navigate to transi</Link> */}
-      {/* </div> */}
     </LayoutNav>
   );
 }

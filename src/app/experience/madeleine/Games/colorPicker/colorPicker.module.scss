@@ -58,7 +58,17 @@
 
 .answer {
   position: fixed;
-  bottom: 60px;
+  bottom: 40px;
+  background-color: $darkBlue;
+  color: $green;
+  width: 100%;
+  max-width: 500px;
+  &.visible {
+    padding: 12px;
+  }
+  h4 {
+    margin-bottom: 6px;
+  }
 }
 
 .validation {

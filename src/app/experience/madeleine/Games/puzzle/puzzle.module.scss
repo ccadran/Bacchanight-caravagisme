@@ -65,3 +65,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.answer {
+  position: fixed;
+  bottom: 40px;
+  background-color: $darkBlue;
+  color: $green;
+  width: 100%;
+  max-width: 500px;
+
+  padding: 12px;
+
+  h4 {
+    margin-bottom: 6px;
+  }
+}

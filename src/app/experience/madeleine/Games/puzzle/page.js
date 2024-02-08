@@ -113,6 +113,16 @@ export default function page() {
           ))}
         </div>
         {isPuzzleSolved() && (
+          <div className={`${styles.answer} `}>
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>
+                Super, t’as réussi! Un crâne donc, un peu glauque mais j’adore!
+              </p>
+            </div>
+          </div>
+        )}
+        {isPuzzleSolved() && (
           <Link
             className={styles.link}
             href="/experience/madeleine/transiColor"
