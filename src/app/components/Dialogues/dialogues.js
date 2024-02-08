@@ -19,9 +19,7 @@ export default function Page({ data, index }) {
     const audioElement = document.getElementById("audioElement");
 
     if (audioElement) {
-      const handleAudioEnd = () => {
-        setShowChoices(true);
-      };
+      const handleAudioEnd = () => {};
 
       audioElement.addEventListener("ended", handleAudioEnd);
 
@@ -33,7 +31,12 @@ export default function Page({ data, index }) {
 
   useEffect(() => {
     // Create GSAP timeline for line animation
-    const lineTimeline = gsap.timeline({});
+    const lineTimeline = gsap.timeline({
+      onComplete: () => {
+        console.log("test");
+        setShowChoices(true);
+      },
+    });
 
     // Add each line to the timeline with a fade-in effect
     data[currentIndex].text.forEach((line, index) => {
@@ -51,19 +54,19 @@ export default function Page({ data, index }) {
             const lineHeight = lineElement.offsetHeight;
 
             // Update scroll position when a line starts
-            if (index >= 2) {
-              const newScrollPosition =
-                dialoguesContainerRef.current.scrollTop + lineHeight;
+            // if (index >= 2) {
+            //   const newScrollPosition =
+            //     dialoguesContainerRef.current.scrollTop + lineHeight;
 
-              gsap.to(dialoguesContainerRef.current, {
-                scrollTop: newScrollPosition,
-                duration: 0.5,
-                ease: "power2.inOut",
-              });
-            }
+            //   gsap.to(dialoguesContainerRef.current, {
+            //     scrollTop: newScrollPosition,
+            //     duration: 0.5,
+            //     ease: "power2.inOut",
+            //   });
+            // }
           },
         },
-        index * 1.5 // Adjust the delay between lines if needed
+        index * 2.5 // Adjust the delay between lines if needed
       );
     });
 

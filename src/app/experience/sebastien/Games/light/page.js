@@ -72,9 +72,21 @@ export default function page() {
           <img src="/icons/cross.svg" alt="" />
         </div>
       </div>
-      <div className={styles.answer}>
+      <div className={`${styles.answer} ${showAnswer ? styles.visible : ""}`}>
         {showAnswer &&
-          (isCorrect ? <p>Bonne réponse</p> : <p>Mauvaise réponse</p>)}
+          (isCorrect ? (
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>Et la lumière fut, ça a marché!</p>
+            </div>
+          ) : (
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>
+                La machine ne valide pas, mets-y du tien c’est très important!
+              </p>
+            </div>
+          ))}
       </div>
       <div className={styles.validation}>
         {isCorrect ? (
