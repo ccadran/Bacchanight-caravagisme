@@ -22,8 +22,8 @@
 }
 
 .game {
-  margin-top: 20vh;
-  height: 40vh;
+  margin-top: 12vh;
+  height: 20vh;
   position: relative;
 
   .mainBar {
@@ -69,4 +69,9 @@
   text-align: center;
   margin: 12px;
   font-size: 18px;
+  background-color: $green;
+  color: $background;
+  width: 30%;
+  margin: 0 auto;
+  padding: 8px;
 }

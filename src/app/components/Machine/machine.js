@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import styles from "./machine.module.scss";
 import { useRouter } from "next/navigation";
+import Button from "../Button/button";
 
 export default function Machine({ link }) {
   const movingBarRef = useRef(null);
@@ -23,6 +24,13 @@ export default function Machine({ link }) {
     if (movingBar.left < indicator.right && movingBar.right > indicator.left) {
       setIsCollide(true);
       setIsAnimating(false);
+      // if (!currentLevel === levels.length - 1) {
+      if (currentLevel < levels.length - 1) {
+        setTimeout(() => {
+          handleRestart();
+        }, 1000);
+      }
+      // }
       if (currentLevel === levels.length - 1) {
         setReadyForNextStep(true); // Indique que vous êtes prêt à passer à l'étape suivante
       }
@@ -110,6 +118,21 @@ export default function Machine({ link }) {
           la machine.
         </p>
       </div>
+      <div className={styles.answer}>
+        {currentLevel === 0 ? (
+          <div className={styles.step}>
+            <p>ÉTAPE 1</p>
+          </div>
+        ) : currentLevel === 1 ? (
+          <div className={styles.step}>
+            <p>ÉTAPE 2</p>
+          </div>
+        ) : (
+          <div className={styles.step}>
+            <p>ÉTAPE 3</p>
+          </div>
+        )}
+      </div>
       <div className={styles.game}>
         <div className={styles.mainBar}>
           <div
@@ -128,16 +151,7 @@ export default function Machine({ link }) {
           </div>
         </div>
       </div>
-
-      {isCollide && (
-        <div className={styles.answer}>
-          {currentLevel === 0
-            ? "Bravo tu as réussi l'étape 1 passe à l'étape 2 en cliquant sur l'écran "
-            : currentLevel === 1
-            ? "Bravo tu as réussi l'étape 2 passe à l'étape 3 en cliquant sur l'écran "
-            : "Merci de m'avoir aidé à allumer la machine , je vais encore avoir besoin de toi pour la suite. Appuie sur l'écran pour continuer"}
-        </div>
-      )}
+      {readyForNextStep && <Button link={link} text="Lancer la machine" />}
     </div>
   );
 }
