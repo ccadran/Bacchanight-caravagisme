@@ -1,7 +1,10 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import styles from "./layout.module.scss";
+import { useState } from 'react';
+import styles from './layout.module.scss';
+
+import PanelAnims from '../panelAnims/panelAnims';
+import AudioAnim from '../panelAnims/audioAnim';
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -12,16 +15,16 @@ export default function RootLayout({ children }) {
   const [isMuted, setIsMuted] = useState(false);
 
   const toggleMute = () => {
-    console.log("test");
+    console.log('test');
     setIsMuted(!isMuted);
     if (isMuted) {
       // Activer le son
-      document.querySelectorAll("audio").forEach((audio) => {
+      document.querySelectorAll('audio').forEach((audio) => {
         audio.volume = 1;
       });
     } else {
       // Couper le son
-      document.querySelectorAll("audio").forEach((audio) => {
+      document.querySelectorAll('audio').forEach((audio) => {
         audio.volume = 0;
       });
     }
@@ -40,7 +43,7 @@ export default function RootLayout({ children }) {
               onClick={() => toggleMute()}
             >
               <img
-                src={isMuted ? "/icons/sound-off.svg" : "/icons/sound-on.svg"}
+                src={isMuted ? '/icons/sound-off.svg' : '/icons/sound-on.svg'}
                 alt=""
               />
             </div>
@@ -49,17 +52,17 @@ export default function RootLayout({ children }) {
         <div className={styles.traveler}>
           <div className={styles.scientifique}>
             <div className={styles.imgContainer}>
-              <img src="/images/Scientidtgreen.png" alt="" />
+              <img src="/images/avatar.png" alt="" />
             </div>
             <div className={styles.travelerVoice}>
               <h4>Scientifique</h4>
               <div className={styles.imgContainer2}>
-                <img src="/images/songLottie.png" alt="" />
+                <AudioAnim />
               </div>
             </div>
           </div>
           <div className={styles.imgContainer}>
-            <img src="/images/lottie.png" alt="" />
+            <PanelAnims />
           </div>
         </div>
       </div>
