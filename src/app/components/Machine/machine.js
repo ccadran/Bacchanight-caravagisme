@@ -9,30 +9,28 @@ export default function Machine() {
   const indicatorRef = useRef(null);
   const [currentLevel, setCurrentLevel] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
-  const [isColide, setIsColide] = useState(false);
+  const [isCollide, setIsCollide] = useState(false);
+  const [nextMove, setNextMove] = useState("stop");
+
   const levels = [{ width: 100 }, { width: 60 }, { width: 40 }];
 
-  // console.log("currentLevel", currentLevel);
-  // console.log("levels", levels[currentLevel].width);
-
   const handleStop = () => {
-    console.log("stop");
-
     const movingBar = movingBarRef.current.getBoundingClientRect();
     const indicator = indicatorRef.current.getBoundingClientRect();
     if (movingBar.left < indicator.right && movingBar.right > indicator.left) {
-      console.log("collision");
-      setIsColide(true);
+      setIsCollide(true);
       setIsAnimating(false);
+      setNextMove("restart");
     }
   };
 
   const handleRestart = () => {
     if (currentLevel < levels.length - 1) {
       setCurrentLevel(currentLevel + 1);
-      setIsColide(false);
+      setIsCollide(false);
       setIsAnimating(true);
       setBarOnPlace();
+      setNextMove("stop");
     } else {
       console.log("end");
     }
@@ -48,6 +46,7 @@ export default function Machine() {
       },
     });
   };
+
   const setBarOnPlace = () => {
     gsap.set(movingBarRef.current, {
       left: `5%`,
@@ -65,14 +64,6 @@ export default function Machine() {
     });
   };
 
-  // window.addEventListener("click", () => {
-  //   if (isAnimating) {
-  //     handleStop();
-  //   } else {
-  //     handleRestart();
-  //   }
-  // });
-
   useEffect(() => {
     if (isAnimating) {
       movingRight();
@@ -80,6 +71,22 @@ export default function Machine() {
       gsap.killTweensOf(movingBarRef.current); // Arrête l'animation en cours
     }
   }, [isAnimating, currentLevel]);
+
+  useEffect(() => {
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  }, [isAnimating]);
+
+  const handleClick = () => {
+    if (isAnimating) {
+      handleStop();
+    } else {
+      handleRestart();
+    }
+  };
 
   return (
     <div className={styles.gameTiming}>
@@ -99,7 +106,7 @@ export default function Machine() {
         </div>
       </div>
 
-      {isColide && (
+      {isCollide && (
         <div className="answer">
           {currentLevel === 0
             ? "Bravo tu as réussi l'étape 1 passe à l'étape 2 en cliquant sur l'écran "
