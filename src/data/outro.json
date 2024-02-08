@@ -1,0 +1,71 @@
+{
+  "intro": [
+    {
+      "id": 1,
+      "text": [
+        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
+        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
+        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
+        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
+      ],
+      "choices": [
+        {
+          "proposition": "Vous êtes en train de voler la police?? "
+        }
+      ],
+      "audio": "/audios/intro/1"
+    },
+    {
+      "id": 2,
+      "text": [
+        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+        "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
+        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
+        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
+        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
+      ],
+      "choices": [
+        {
+          "proposition": "J’adhère à votre combat.",
+          "switchToIndex": "2"
+        },
+        {
+          "proposition": "Tu t’es joué de moi, débrouille-toi.",
+          "switchToIndex": "3"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+    {
+      "id": 3,
+      "text": [
+        "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
+        "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
+        "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.”"
+      ],
+      "choices": [
+        {
+          "proposition": "Lancer la machine",
+          "switchToGame": "/experience/outro/machine"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+
+    {
+      "id": 4,
+      "text": [
+        "Tu ne comprends rien, ces tableaux vont être détruits tu m'entends!? Détruits!!!",
+        "Tu ne comprends rien, ces tableaux vont être détruits tu m'entends!? Détruits!!!"
+      ],
+      "choices": [
+        {
+          "proposition": "Lancer la machine",
+          "switchToGame": "/experience/outro/machine"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    }
+  ]
+}

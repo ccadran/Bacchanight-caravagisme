@@ -91,9 +91,13 @@ export default function Page({ data }) {
     };
   }, []);
 
-  const handleChoiceClick = (switchToGame) => {
+  const handleChoiceClick = (event, switchToGame, switchToIndex) => {
     if (switchToGame) {
       // console.log("Switching to game:", switchToGame);
+    } else if (switchToIndex) {
+      setCurrentIndex(switchToIndex);
+      event.preventDefault();
+      // setShowChoices(false);
     } else {
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setShowChoices(false);
@@ -115,7 +119,13 @@ export default function Page({ data }) {
               <a
                 key={index}
                 className={choiceClass}
-                onClick={() => handleChoiceClick(choice.switchToGame)}
+                onClick={() =>
+                  handleChoiceClick(
+                    event,
+                    choice.switchToGame,
+                    choice.switchToIndex
+                  )
+                }
                 href={choice.switchToGame ? choice.switchToGame : undefined}
               >
                 {choice.proposition}
@@ -144,7 +154,7 @@ export default function Page({ data }) {
           <audio
             id="audioElement"
             src={`${data[currentIndex].audio}.mp3`}
-            // controls
+            controls
             autoPlay
           ></audio>
         </>
