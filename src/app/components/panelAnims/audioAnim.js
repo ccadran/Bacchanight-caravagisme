@@ -1,4 +1,4 @@
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 export default function AudioAnims() {
   return (
@@ -7,7 +7,7 @@ export default function AudioAnims() {
         autoplay
         loop
         src="/anims/PANEL_VOICE.json"
-        style={{ height: '50px', width: '225px' }}
+        style={{ height: "50px", width: "225px" }}
       >
         <Controls visible={false} />
       </Player>

@@ -45,7 +45,7 @@ export default function page() {
     <LayoutNav>
       <div className={styles.consignes}>
         <div className={styles.avatarContainer}>
-          <img src="" alt="" />
+          <img src="/images/avatar.png" alt="" />
         </div>
         <p>
           A l’aide de ton doigt place la source de lumière en cliquant sur

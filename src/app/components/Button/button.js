@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function button({ link, text }) {
   return (
-    <div className={styles.button}>
-      <Link href={link}>{text}</Link>
-    </div>
+    <Link className={styles.button} href={link}>
+      <h4>{text}</h4>
+    </Link>
   );
 }

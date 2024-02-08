@@ -3,6 +3,7 @@
 .dialogues {
   height: 60vh;
   overflow-y: scroll;
+  position: relative;
   .dialoguesContainer {
     display: flex;
     flex-direction: column;
@@ -14,8 +15,8 @@
   position: fixed;
   bottom: 0;
   height: 8vh;
-  max-width: 500px;
   width: 100%;
+  max-width: 500px;
   display: flex;
   justify-content: space-between;
   .multipleChoice {
@@ -47,5 +48,8 @@
     justify-content: center;
     align-items: center;
     padding: 6px;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }

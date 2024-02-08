@@ -111,7 +111,7 @@ export default function Machine({ link }) {
     <div className={styles.gameTiming}>
       <div className={styles.consignes}>
         <div className={styles.avatarContainer}>
-          <img src="" alt="" />
+          <img src="/images/avatar.png" alt="" />
         </div>
         <p>
           Appuie lorsque les curseurs se trouvent dans la zone verte pour lancer
@@ -151,7 +151,15 @@ export default function Machine({ link }) {
           </div>
         </div>
       </div>
-      {readyForNextStep && <Button link={link} text="Lancer la machine" />}
+      {readyForNextStep && (
+        <div className={styles.finish}>
+          <p>
+            Bravo tu as finis toutes les étapes tu peux maintenant lancer la
+            machine !
+          </p>
+          <Button link={link} text="Lancer la machine" />
+        </div>
+      )}
     </div>
   );
 }

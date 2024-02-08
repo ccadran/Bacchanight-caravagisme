@@ -94,7 +94,7 @@ export default function page() {
       <div className={styles.puzzleContainer}>
         <div className={styles.consignes}>
           <div className={styles.avatarContainer}>
-            <img src="" alt="" />
+            <img src="/images/avatar.png" alt="" />
           </div>
           <p>
             Remet le tableau en ordre en cliquant sur les pièces pour les faire

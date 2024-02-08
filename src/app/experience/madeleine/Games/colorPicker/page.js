@@ -31,7 +31,7 @@ export default function page() {
 
       <div className={styles.consignes}>
         <div className={styles.avatarContainer}>
-          <img src="" alt="" />
+          <img src="/images/avatar.png" alt="" />
         </div>
         <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
       </div>

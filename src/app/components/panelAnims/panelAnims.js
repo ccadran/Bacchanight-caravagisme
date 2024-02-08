@@ -1,4 +1,4 @@
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 export default function PanelAnims() {
   return (
@@ -7,7 +7,7 @@ export default function PanelAnims() {
         autoplay
         loop
         src="/anims/MOTION_PANEL.json"
-        style={{ height: '225px', width: '225px' }}
+        style={{ height: "30vh", width: "100%" }}
       >
         <Controls visible={false} />
       </Player>
