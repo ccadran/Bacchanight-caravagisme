@@ -7,7 +7,6 @@ export default function page() {
   return (
     <LayoutNav>
       <Machine link={"/experience/sebastien/"} />
-      <Link href="/experience/sebastien/">navigate to sebastien</Link>
     </LayoutNav>
   );
 }

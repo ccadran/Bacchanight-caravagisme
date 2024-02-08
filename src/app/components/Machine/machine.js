@@ -45,7 +45,7 @@ export default function Machine({ link }) {
   const movingLeft = () => {
     gsap.to(movingBarRef.current, {
       left: "0%",
-      duration: 2,
+      duration: 1,
       ease: "none",
       onComplete: () => {
         movingRight();
@@ -62,7 +62,7 @@ export default function Machine({ link }) {
   const movingRight = () => {
     gsap.to(movingBarRef.current, {
       left: `calc(100% - ${levels[currentLevel].width}px)`,
-      duration: 2,
+      duration: 1,
       ease: "none",
       onComplete: () => {
         movingLeft();
@@ -102,7 +102,10 @@ export default function Machine({ link }) {
   return (
     <div className={styles.gameTiming}>
       <div className={styles.consignes}>
-        <p></p>
+        <div className={styles.avatarContainer}>
+          <img src="" alt="" />
+        </div>
+        <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
       </div>
       <div className={styles.game}>
         <div className={styles.mainBar}>
@@ -124,19 +127,14 @@ export default function Machine({ link }) {
       </div>
 
       {isCollide && (
-        <div className="answer">
+        <div className={styles.answer}>
           {currentLevel === 0
             ? "Bravo tu as réussi l'étape 1 passe à l'étape 2 en cliquant sur l'écran "
             : currentLevel === 1
             ? "Bravo tu as réussi l'étape 2 passe à l'étape 3 en cliquant sur l'écran "
-            : "Bravo tu as réussi l'étape 3 passe à la suite en cliquant sur l'écran "}
+            : "Merci de m'avoir aidé à allumer la machine , je vais encore avoir besoin de toi pour la suite. Appuie sur l'écran pour continuer"}
         </div>
       )}
-
-      <div className={styles.stop}>
-        <button onClick={() => handleStop()}>STOP</button>
-        <button onClick={() => handleRestart()}>RESTART</button>
-      </div>
     </div>
   );
 }
