@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function page() {
+export default function Switch() {
   return (
     <>
       <div>puzzle</div>;

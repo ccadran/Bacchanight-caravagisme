@@ -3,7 +3,7 @@ import Layout from "@/app/components/Layout/layout";
 import Dialogues from "@/app/components/Dialogues/dialogues";
 import Data from "../../../../data/outro.json";
 
-export default function page() {
+export default function afterGame() {
   const data = Data.afterGame;
   return (
     <Layout>

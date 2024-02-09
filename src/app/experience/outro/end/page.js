@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import LayoutNav from "@/app/components/LayoutNav/layoutNav";
 import styles from "./end.module.scss";
 
-export default function page() {
+export default function End() {
   const searchParams = useSearchParams();
   const search = searchParams.get("wichEnd");
   return (

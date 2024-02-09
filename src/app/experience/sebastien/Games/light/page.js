@@ -5,7 +5,7 @@ import React, { useRef, useState } from "react";
 import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 import styles from "./light.module.scss";
 import gsap from "gsap";
-export default function page() {
+export default function LightGame() {
   const crossRef = useRef(null);
   const [showCross, setShowCross] = useState(false);
   const [isLight, setIsLight] = useState(false);
