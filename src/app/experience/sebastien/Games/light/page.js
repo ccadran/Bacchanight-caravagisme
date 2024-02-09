@@ -56,8 +56,8 @@ export default function page() {
         className={styles.imageContainer}
         style={{
           background: isCorrect
-            ? `url("/images/ColorPicker/red.png") center/cover`
-            : `url("/images/ColorPicker/green.png") center/cover`,
+            ? `url("/images/Light/light.png") center/cover`
+            : `url("/images/Light/dark.png") center/cover`,
         }}
         onClick={(e) => handleGlobalClick(e)}
       >
