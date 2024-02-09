@@ -3,31 +3,31 @@
     {
       "colorName": "red1",
       "color": "#8E2D05",
-      "img": "/images/colorPicker/red1.png",
+      "img": "/images/ColorPicker/red1.png",
       "isCorrect": true
     },
     {
       "colorName": "red2",
       "color": "#743A22",
-      "img": "/images/colorPicker/red2.png",
+      "img": "/images/ColorPicker/red2.png",
       "isCorrect": false
     },
     {
       "colorName": "red3",
       "color": "#70261E",
-      "img": "/images/colorPicker/red3.png",
+      "img": "/images/ColorPicker/red3.png",
       "isCorrect": false
     },
     {
       "colorName": "red4",
       "color": "#724926",
-      "img": "/images/colorPicker/red4.png",
+      "img": "/images/ColorPicker/red4.png",
       "isCorrect": false
     },
     {
       "colorName": "red5",
       "color": "#791819",
-      "img": "/images/colorPicker/red5.png",
+      "img": "/images/ColorPicker/red5.png",
       "isCorrect": false
     }
   ]
