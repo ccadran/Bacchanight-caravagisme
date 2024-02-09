@@ -1,7 +1,10 @@
 @import "@/app/styles/variables.scss";
+
 .container {
     width: 100vw;
     max-width: 500px;
+    height: 100vh;
+    background-color: black;
 }
 
 .slider {
@@ -50,8 +53,9 @@
     border: none;
     background-color: $green;
     padding: 5px 10px;
-    font-size: 20px;
     cursor: pointer;
+    font-family: $body;
+    font-size: 16px;
 }
 
 .validation {
@@ -65,4 +69,10 @@
     padding: 5px 10px;
     font-size: 20px;
     cursor: pointer;
+}
+
+.validation a {
+    color: black;
+    font-family: $body;
+    font-size: 16px;
 }

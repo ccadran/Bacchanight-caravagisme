@@ -59,7 +59,7 @@ export default function Page() {
       }
     }
   };
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.slider} ref={sliderRef} onScroll={handleScroll}>
@@ -115,7 +115,7 @@ export default function Page() {
       </div>
       {isCorrect ? (
         <button className={styles.validation}>
-          <Link href="/experience/madeleine/machine">navigate to machine</Link>
+          <Link href="/experience/madeleine/machine">Continuer</Link>
         </button>
       ) : null}
     </div>
