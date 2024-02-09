@@ -8,6 +8,7 @@ import styles from "./dialogues.module.scss";
 export default function Page({ data, index }) {
   const [currentIndex, setCurrentIndex] = useState(index || 0);
   const [showChoices, setShowChoices] = useState(false);
+  const choicesContainer = useRef();
   const dialoguesContainerRef = useRef(null);
 
   useEffect(() => {
@@ -52,18 +53,6 @@ export default function Page({ data, index }) {
           onStart: () => {
             // Get the height of the current line
             const lineHeight = lineElement.offsetHeight;
-
-            // Update scroll position when a line starts
-            // if (index >= 2) {
-            //   const newScrollPosition =
-            //     dialoguesContainerRef.current.scrollTop + lineHeight;
-
-            //   gsap.to(dialoguesContainerRef.current, {
-            //     scrollTop: newScrollPosition,
-            //     duration: 0.5,
-            //     ease: "power2.inOut",
-            //   });
-            // }
           },
         },
         index * 3.5 // Adjust the delay between lines if needed
@@ -79,11 +68,16 @@ export default function Page({ data, index }) {
   }, [currentIndex]);
 
   useEffect(() => {
+    gsap.fromTo(
+      choicesContainer.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5 }
+    );
+  }, [showChoices]);
+
+  useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = dialoguesContainerRef.current.scrollTop;
-      // console.log("Scroll position:", scrollPosition);
-
-      // Your scroll event handling logic here
     };
 
     const currentRef = dialoguesContainerRef.current;
@@ -116,12 +110,12 @@ export default function Page({ data, index }) {
 
     if (showChoices) {
       return (
-        <div className={styles.choicesContainer}>
+        <div ref={choicesContainer} className={styles.choicesContainer}>
           {data[currentIndex].choices &&
             data[currentIndex].choices.map((choice, index) => (
               <a
                 key={index}
-                className={choiceClass}
+                className={`${choiceClass}`}
                 onClick={() =>
                   handleChoiceClick(
                     event,
@@ -158,7 +152,7 @@ export default function Page({ data, index }) {
           <audio
             id="audioElement"
             src={`${data[currentIndex].audio}.mp3`}
-            controls
+            // controls
             autoPlay
           ></audio>
         </>
