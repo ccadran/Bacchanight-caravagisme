@@ -18,11 +18,11 @@ export default function page() {
         </div>
         <div className={styles.otherEnd}>
           {search === "2" ? (
-            <Link href={`/experience/outro/otherEnd?index=4`}>
+            <Link href={`/experience/outro/otherEnd?index=3`}>
               Découvrir l'autre fin
             </Link>
           ) : (
-            <Link href={`/experience/outro/otherEnd?index=3`}>
+            <Link href={`/experience/outro/otherEnd?index=2`}>
               Découvrir l'autre fin{" "}
             </Link>
           )}

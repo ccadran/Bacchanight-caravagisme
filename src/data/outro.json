@@ -53,43 +53,12 @@
       ],
       "choices": [
         {
-          "proposition": "Vous êtes en train de voler la police?? "
-        }
-      ],
-      "audio": "/audios/intro/2"
-    },
-    {
-      "id": 2,
-      "text": [
-        {
-          "text": "Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-          "speaker": "Scientifique"
-        },
-        {
-          "text": "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
-          "speaker": "Scientifique"
-        },
-        {
-          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
-          "speaker": "Scientifique"
-        },
-        {
-          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
-          "speaker": "Scientifique"
-        },
-        {
-          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
-          "speaker": "Scientifique"
-        }
-      ],
-      "choices": [
-        {
           "proposition": "J’adhère à votre combat.",
-          "switchToIndex": "3"
+          "switchToIndex": "2"
         },
         {
           "proposition": "Tu t’es joué de moi, débrouille-toi.",
-          "switchToIndex": "4"
+          "switchToIndex": "3"
         }
       ],
       "audio": "/audios/intro/2"
