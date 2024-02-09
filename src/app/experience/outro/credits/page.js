@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './credits.module.scss';
+import React from "react";
+import styles from "./credits.module.scss";
 
 export default function page() {
   return (
@@ -29,6 +29,14 @@ export default function page() {
         <div className={styles.rectangle}>
           <h2>Développement</h2>
           <p>CADRAN Clario</p>
+        </div>
+        <div className={styles.rectangle}>
+          <h2>Acteur</h2>
+          <p>Maël Ledrin</p>
+        </div>
+        <div className={styles.rectangle}>
+          <h2>Acteur</h2>
+          <p>Francois DA CAMARA</p>
         </div>
       </div>
     </div>
