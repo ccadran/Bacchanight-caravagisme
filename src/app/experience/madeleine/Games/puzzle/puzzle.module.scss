@@ -1,0 +1,83 @@
+@import "../../../../styles/variables.scss";
+
+.puzzleContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.consignes {
+  display: flex;
+  margin: 0 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5svh;
+  margin-top: 5svh;
+  text-align: center;
+  .avatarContainer {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 16px;
+    img {
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.puzzle {
+  margin-top: 5svh;
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  row-gap: 4px;
+  column-gap: 4px;
+  max-width: 500px;
+}
+
+@media screen and (min-width: 560px) {
+  .puzzle {
+    column-gap: 4px;
+    max-width: 500px;
+  }
+}
+
+.tile:first-child {
+  object-fit: contain;
+  position: relative;
+}
+
+.link {
+  position: fixed;
+  bottom: 0;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  font-family: $body;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  background-color: $green;
+  width: 100%;
+  color: $darkBlue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer {
+  position: fixed;
+  bottom: 40px;
+  background-color: $darkBlue;
+  color: $green;
+  width: 100%;
+  max-width: 500px;
+
+  padding: 12px;
+
+  h4 {
+    margin-bottom: 6px;
+  }
+}

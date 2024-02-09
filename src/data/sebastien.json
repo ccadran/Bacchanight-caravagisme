@@ -3,13 +3,22 @@
     {
       "id": 1,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Je sais que cette œuvre contient une source de lumière, seulement je n’arrive pas à savoir où elle se situe dans la composition. Il faut que tu m’aides!"
+        {
+          "text": "Parfait ! Il faut savoir que les jeux d’ombres et de lumières du clair-obscur sont une des caractéristiques phares du mouvement créé par Michelangelo le Caravage.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Je sais que cette œuvre contient une source de lumière, seulement je n’arrive pas à savoir où elle se situe dans la composition.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "A l’aide de ton doigt, place la source de lumière en cliquant sur l’image.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
-          "proposition": "Je me demande surtout qui tu es ! ",
+          "proposition": "Trouver la source de lumière ",
           "switchToGame": "/experience/sebastien/Games/light"
         }
       ],
@@ -20,14 +29,19 @@
     {
       "id": 1,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Bien, désormais il ne manque plus qu’à trouver ce que Sainte Irène porte dans ses mains, les écrits se sont grandement détériorés avec le temps, dis-moi ce que tu vois lorsque tu regardes le tableau."
+        {
+          "text": "Bien, désormais, il ne manque plus qu’à trouver ce que la dame porte dans ses mains. Dis-moi ce que tu vois lorsque tu regardes le tableau.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Trouve l’image qui correspond au tableau.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
-          "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "experience/sebastien/Games/switch"
+          "proposition": "Choisir la bonne image ",
+          "switchToGame": "/experience/sebastien/Games/switch"
         }
       ],
       "audio": "/audios/intro/2"
@@ -37,13 +51,22 @@
     {
       "id": 1,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Je vais appuyer sur le bouton d’activation, tu n’auras qu'à cliquer sur ton écran au bon moment. Tu vas vite comprendre ne t’inquiète pas."
+        {
+          "text": "C’est tout ce qu’il me manquait pour avoir une description complète de l’œuvre.",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Il ne reste plus qu'à activer la machine pour délivrer le tableau. ",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Je vais appuyer sur le bouton d’activation, tu n’auras qu'à cliquer sur ton écran au bon moment. Tu vas vite comprendre ne t’inquiète pas.",
+          "speaker": "Machine"
+        }
       ],
       "choices": [
         {
-          "proposition": "Je me demande surtout qui tu es ! ",
+          "proposition": "Démarrer la machine",
           "switchToGame": "experience/sebastien/machine"
         }
       ],

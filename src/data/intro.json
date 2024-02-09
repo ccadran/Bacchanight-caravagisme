@@ -3,32 +3,58 @@
     {
       "id": 1,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
+        { "text": "Allo? Allo? Vous me recevez?", "speaker": "Scientifique" }
       ],
       "choices": [
         {
-          "proposition": "Je me demande surtout qui tu es ! "
+          "proposition": "Mal… mais je vous comprends."
         }
       ],
-      "audio": "/audios/intro/1"
+      "audio": "/audios/intro/2"
     },
     {
       "id": 2,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
+        {
+          "text": "Très bien, c’est tout ce qui compte. Je ne vis pas dans la même époque que toi, il serait trop compliqué de tout t’expliquer!",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Voilà le topo, deux peintures sur le caravagisme sont maintenues en captivité dans un hangar sécurisé, mais nous devons absolument les récupérer.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "J’ai réussi à m’infiltrer mais les œuvres sont protégées, il faut que tu m’aides en m’apportant des détails concernant les tableaux pour que je puisse les libérer de leurs sceaux.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
-          "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "/experience/madeleine"
+          "proposition": "Pourquoi je vous ferais confiance?"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+    {
+      "id": 2,
+      "text": [
+        {
+          "text": "J’aurais aimé ne pas avoir à te le révéler mais je suis un agent de la CIA, c’est une mission secrète et notre temps est compté.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Le système de surveillance est hors service mais ça ne durera pas éternellement.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Commence par te diriger vers le premier tableau, tu verras un grand gaillard musclé et deux femmes se tenant à sa droite. Il doit se trouver tout prêt de l’entrée de la salle.",
+          "speaker": "Scientifique"
+        }
+      ],
+      "choices": [
+        {
+          "proposition": "J’y suis.",
+          "switchToGame": "/experience/sebastien/"
         }
       ],
       "audio": "/audios/intro/2"

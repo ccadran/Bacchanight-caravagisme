@@ -1,0 +1,137 @@
+{
+  "outro": [
+    {
+      "id": 1,
+      "text": [
+        {
+          "text": "On touche au but, il n'y a plus qu'à activer la machine, et je pourrai repartir sauver les 2 ta...",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "POLICE, OUVREZ LA PORTE, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR”",
+          "speaker": "POLICE"
+        },
+        {
+          "text": "Zut, on a de la compagnie, il faut se dépêcher.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Vous êtes en état d’arrestation, identifiez-vous maintenant, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR. Mes collègues sont en route”",
+          "speaker": "POLICE"
+        },
+        {
+          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
+          "speaker": "Scientifique"
+        }
+      ],
+      "choices": [
+        {
+          "proposition": "Vous êtes en train de voler la police?? "
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+    {
+      "id": 1,
+      "text": [
+        {
+          "text": "C'est-à-dire que… la CIA dont je t’ai parlé n’est pas tout à fait celle à laquelle tu penses, en réalité nous sommes la Confédération des Intéressés de l’Art",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Il est possible que je t’aie menti pour mieux te manipuler. Mais c’est pour la bonne cause crois-moi.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Aujourd’hui l’art est numérique, plus que des zéros et des un. Les œuvres d'antan sont prohibées, alors avec une bande d’amis rebelles, on essaye de faire revivre l’histoire, peu importe si ça dérange l'autorité.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "On ne peut pas s’arrêter en si bon chemin, aide-moi à délivrer le dernier tableau avant que je ne me fasse attraper.",
+          "speaker": "Scientifique"
+        }
+      ],
+      "choices": [
+        {
+          "proposition": "J’adhère à votre combat.",
+          "switchToIndex": "2"
+        },
+        {
+          "proposition": "Tu t’es joué de moi, débrouille-toi.",
+          "switchToIndex": "3"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+    {
+      "id": 3,
+      "text": [
+        {
+          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.”",
+          "speaker": "Scientifique"
+        }
+      ],
+      "choices": [
+        {
+          "proposition": "Lancer la machine",
+          "switchToGame": "/experience/outro/machine"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+    {
+      "id": 4,
+      "text": [
+        {
+          "text": "Tu ne comprends rien, ces tableaux vont être détruits tu m'entends!? Détruits!!!",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Tu ne comprends rien, ces tableaux vont être détruits tu m'entends!? Détruits!!!",
+          "speaker": "Scientifique"
+        }
+      ],
+      "choices": [
+        {
+          "proposition": "Clicker pour voir la suite",
+          "switchToGame": "/experience/outro/end?wichEnd=1"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    }
+  ],
+  "afterGame": [
+    {
+      "id": 1,
+      "text": [
+        {
+          "text": "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+          "speaker": "Scientifique"
+        }
+      ],
+      "choices": [
+        {
+          "proposition": "Clicker pour voir la suite",
+          "switchToGame": "/experience/outro/end?wichEnd=2"
+        }
+      ],
+      "audio": "/audios/intro/2"
+    }
+  ]
+}

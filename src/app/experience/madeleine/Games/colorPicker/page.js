@@ -6,12 +6,12 @@ import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 import Data from "../../../../../data/painting.json";
 import styles from "./colorPicker.module.scss";
 
-export default function page() {
+export default function ColorPicker() {
   const data = Data.madeleine;
-  const [currentColor, setCurrentColor] = useState(data[0]);
+
+  const [currentColor, setCurrentColor] = useState(data[3]);
   const [showAnswer, setShowAnswer] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  // console.log(currentColor);
 
   const handleColorClick = (color) => {
     setCurrentColor(color);
@@ -31,7 +31,7 @@ export default function page() {
 
       <div className={styles.consignes}>
         <div className={styles.avatarContainer}>
-          <img src="" alt="" />
+          <img src="/images/avatar.png" alt="" />
         </div>
         <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
       </div>
@@ -54,17 +54,23 @@ export default function page() {
           </div>
         ))}
       </div>
-      <div className={styles.answer}>
+      <div className={`${styles.answer} ${showAnswer ? styles.visible : ""}`}>
         {showAnswer &&
-          (currentColor.isCorrect ? (
-            <p>Bonne réponse</p>
+          (isCorrect ? (
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>Bravo! Quel œil !</p>
+            </div>
           ) : (
-            <p>Mauvaise réponse</p>
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>Ce n’est pas la bonne teinte, il faut être minutieux </p>
+            </div>
           ))}
       </div>
       <div className={styles.validation}>
         {isCorrect ? (
-          <Link href="/experience/madeleine/transiSlider">
+          <Link href="/experience/outro">
             <p>Suivant</p>
           </Link>
         ) : (
@@ -73,9 +79,6 @@ export default function page() {
           </button>
         )}
       </div>
-
-      {/* <Link href="/experience/madeleine/transiSlider">navigate to transi</Link> */}
-      {/* </div> */}
     </LayoutNav>
   );
 }

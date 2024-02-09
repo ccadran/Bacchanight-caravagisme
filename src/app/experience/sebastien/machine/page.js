@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import Layout from "../../../components/Layout/layout";
+import LayoutNav from "../../../components/LayoutNav/layoutNav";
+import Machine from "@/app/components/Machine/machine";
 
-export default function page() {
+export default function MachineSebastien() {
   return (
-    <Layout>
-      <div>machine</div>
-      <Link href="/experience/outro/">navigate to outro</Link>
-    </Layout>
+    <LayoutNav>
+      <Machine link={"/experience/madeleine"} />
+    </LayoutNav>
   );
 }

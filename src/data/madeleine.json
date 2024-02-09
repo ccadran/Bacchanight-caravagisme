@@ -3,14 +3,42 @@
     {
       "id": 1,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Je sais que cette œuvre contient une source de lumière, seulement je n’arrive pas à savoir où elle se situe dans la composition. Il faut que tu m’aides!"
+        {
+          "text": "Bien joué, le premier tableau est sauvé, tu peux désormais te diriger vers le second.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Sur celui-ci, tu trouveras une femme, arborant une couverture de couleur vive, seule sur un fond sombre et la tête renversée en arrière.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
-          "proposition": "J'y suis ",
-          "switchToGame": "/experience/madeleine/Games/colorPicker"
+          "proposition": "J'y suis "
+        }
+      ],
+      "audio": "/audios/intro/2"
+    },
+    {
+      "id": 1,
+      "text": [
+        {
+          "text": "D’accord, pour ton information, le Caravagisme représente également la vanité, évoquant les fins dernières de l’homme tel que la mort.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Tu dois m’aider à trouver dans ce tableau le symbole de vanité représenté en mettant toutes les pièces dans le bon sens",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Remets le tableau en ordre en cliquant sur les pièces pour les faire tourner.",
+          "speaker": "Scientifique"
+        }
+      ],
+      "choices": [
+        {
+          "proposition": "Remettre les pièces dans le bon ordre",
+          "switchToGame": "/experience/madeleine/Games/puzzle"
         }
       ],
       "audio": "/audios/intro/2"
@@ -20,14 +48,27 @@
     {
       "id": 1,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Bien, désormais il ne manque plus qu’à trouver ce que Sainte Irène porte dans ses mains, les écrits se sont grandement détériorés avec le temps, dis-moi ce que tu vois lorsque tu regardes le tableau."
+        {
+          "text": "Super, tu as réussi! Un crâne donc, un peu glauque mais j’adore!",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Comme tu peux le voir sur le tableau, la femme porte sur elle une couverture de couleur vive mais je n’arrive pas à retrouver laquelle.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Il s’agit de rouge senois mais je n’ai pas la moindre idée de ce que ça représente, aujourd’hui le nom des teintes que les peintres utilisaient ont totalement disparu.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Il me faut la couleur précise, tu devrais pouvoir la retrouver sans problème avec le tableau en face de toi.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
-          "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "/experience/madeleine/Games/puzzle"
+          "proposition": "Sélectionne la bonne couleur du drap. ",
+          "switchToGame": "/experience/madeleine/Games/colorPicker"
         }
       ],
       "audio": "/audios/intro/2"
@@ -37,9 +78,18 @@
     {
       "id": 1,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "fdsvsdcx2Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Je vais appuyer sur le bouton d’activation, tu n’auras qu'à cliquer sur ton écran au bon moment. Tu vas vite comprendre ne t’inquiète pas."
+        {
+          "text": "Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Je vais appuyer sur le bouton d’activation, tu n’auras qu'à cliquer sur ton écran au bon moment. Tu vas vite comprendre ne t’inquiète pas.",
+          "speaker": "Machine"
+        }
       ],
       "choices": [
         {

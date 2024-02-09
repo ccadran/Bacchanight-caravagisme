@@ -5,7 +5,7 @@ import React, { useRef, useState } from "react";
 import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 import styles from "./light.module.scss";
 import gsap from "gsap";
-export default function page() {
+export default function LightGame() {
   const crossRef = useRef(null);
   const [showCross, setShowCross] = useState(false);
   const [isLight, setIsLight] = useState(false);
@@ -45,16 +45,19 @@ export default function page() {
     <LayoutNav>
       <div className={styles.consignes}>
         <div className={styles.avatarContainer}>
-          <img src="" alt="" />
+          <img src="/images/avatar.png" alt="" />
         </div>
-        <p>Retrouve la couleur du drap en cliquant sur la bonne couleur</p>
+        <p>
+          A l’aide de ton doigt place la source de lumière en cliquant sur
+          l’image.
+        </p>
       </div>
       <div
         className={styles.imageContainer}
         style={{
           background: isCorrect
-            ? `url("/images/ColorPicker/red.png") center/cover`
-            : `url("/images/ColorPicker/green.png") center/cover`,
+            ? `url("/images/Light/light.png") center/cover`
+            : `url("/images/Light/dark.png") center/cover`,
         }}
         onClick={(e) => handleGlobalClick(e)}
       >
@@ -69,13 +72,25 @@ export default function page() {
           <img src="/icons/cross.svg" alt="" />
         </div>
       </div>
-      <div className={styles.answer}>
+      <div className={`${styles.answer} ${showAnswer ? styles.visible : ""}`}>
         {showAnswer &&
-          (isCorrect ? <p>Bonne réponse</p> : <p>Mauvaise réponse</p>)}
+          (isCorrect ? (
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>Et la lumière fut, ça a marché!</p>
+            </div>
+          ) : (
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              <p>
+                La machine ne valide pas, mets-y du tien c’est très important!
+              </p>
+            </div>
+          ))}
       </div>
       <div className={styles.validation}>
         {isCorrect ? (
-          <Link href="/experience/madeleine/transiSlider">
+          <Link href="/experience/sebastien/transiSwitch">
             <p>Suivant</p>
           </Link>
         ) : (
