@@ -6,13 +6,14 @@ import styles from './switch.module.scss';
 
 export default function Page() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isCorrect, setIsCorrect] = useState(false);
   const sliderRef = useRef(null);
 
-  useEffect(() => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollTo(0, 0);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (sliderRef.current) {
+  //     sliderRef.current.scrollTo(0, 0);
+  //   }
+  // }, []);
 
   const handleScroll = (event) => {
     if (event) {
@@ -40,9 +41,7 @@ export default function Page() {
 
   const handleValidation = () => {
     if (currentIndex === 2) {
-      return true;
-    } else {
-      return false;
+      setIsCorrect(true);
     }
   };
 
@@ -101,17 +100,23 @@ export default function Page() {
           />
         </div>
       </div>
-      <button className={styles.arrows} onClick={scrollPrev}>
-        Précédent
-      </button>
-      <button className={styles.arrows} onClick={scrollNext}>
-        Suivant
-      </button>
-      <button className={styles.button} onClick={handleValidation()}>
-        Valider
-      </button>
-      {handleValidation() ? (
-        <Link href="/experience/madeleine/machine">navigate to machine</Link>
+      <div className={styles.nav}>
+        <button className={styles.arrows} onClick={scrollPrev}>
+          ←
+        </button>
+        <button className={styles.arrows} onClick={scrollNext}>
+          →
+        </button>
+      </div>
+      <div className={styles.wrapper}>
+        <button className={styles.button} onClick={handleValidation}>
+          Valider
+        </button>
+      </div>
+      {isCorrect ? (
+        <button className={styles.validation}>
+          <Link href="/experience/madeleine/machine">navigate to machine</Link>
+        </button>
       ) : null}
     </div>
   );
