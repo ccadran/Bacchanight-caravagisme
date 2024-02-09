@@ -63,6 +63,12 @@ export default function Page() {
 
   return (
     <LayoutNav>
+      <div className={styles.consignes}>
+        <div className={styles.avatarContainer}>
+          <img src="/images/avatar.png" alt="" />
+        </div>
+        <p>Trouves l’image qui correspond au tableau.</p>
+      </div>
       <div className={styles.container}>
         <div className={styles.slider} ref={sliderRef} onScroll={handleScroll}>
           <div className={styles.slide}>

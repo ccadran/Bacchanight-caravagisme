@@ -1,68 +1,91 @@
 @import "@/app/styles/variables.scss";
 .container {
-    width: 100vw;
-    max-width: 500px;
+  width: 100vw;
+  max-width: 500px;
+}
+
+.consignes {
+  display: flex;
+  margin: 0 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5svh;
+  text-align: center;
+  margin-top: 5svh;
+  .avatarContainer {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 16px;
+    img {
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 .slider {
-    overflow-x: auto;
-    width: 100%; 
-    display: flex;
-    flex-wrap: nowrap;
-    scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 
 .slide {
-    scroll-snap-align: center;
-    width: 100%;
-    flex-shrink: 0;
+  scroll-snap-align: center;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-around;
-    top: 0;
+  display: flex;
+  justify-content: space-around;
+  top: 0;
 }
 
 .arrows {
-    background: none;
-    border: none;
-    background-color: $green;
-    padding: 5px 10px;
-    font-size: 30px;
+  background: none;
+  border: none;
+  background-color: $green;
+  padding: 5px 10px;
+  font-size: 30px;
 }
 
 .arrows:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .wrapper {
-    display: flex; 
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .button {
-    border: none;
-    background-color: $green;
-    padding: 5px 10px;
-    font-size: 20px;
-    cursor: pointer;
+  border: none;
+  background-color: $green;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .validation {
-    position: fixed;
-    bottom: 0;
-    max-width: 500px;
-    width: 100%;
-    height: 40px;
-    border: none;
-    background-color: $green;
-    padding: 5px 10px;
-    font-size: 20px;
-    cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  max-width: 500px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: $green;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
 }
