@@ -7,7 +7,7 @@ import Button from "./components/Button/button"; // Import correct
 export default function Home() {
   return (
     <Layout>
-      <main>
+      <main className={styles.main}>
         <div className={styles.phone}>
           <img src="/images/3D-phone.png" alt="" />
         </div>
