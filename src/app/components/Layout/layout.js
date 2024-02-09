@@ -50,10 +50,8 @@ export default function RootLayout({ children }) {
               <img src="/images/avatar.png" alt="" />
             </div>
             <div className={styles.travelerVoice}>
+              {/* <AudioAnim /> */}
               <h4>Scientifique</h4>
-              <div className={styles.imgContainer2}>
-                <AudioAnim />
-              </div>
             </div>
           </div>
           <div className={styles.imgContainer}>

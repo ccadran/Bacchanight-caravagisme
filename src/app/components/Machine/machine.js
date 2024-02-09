@@ -121,15 +121,15 @@ export default function Machine({ link }) {
       <div className={styles.answer}>
         {currentLevel === 0 ? (
           <div className={styles.step}>
-            <p>ÉTAPE 1</p>
+            <p>ÉTAPE 1/3</p>
           </div>
         ) : currentLevel === 1 ? (
           <div className={styles.step}>
-            <p>ÉTAPE 2</p>
+            <p>ÉTAPE 2/3</p>
           </div>
         ) : (
           <div className={styles.step}>
-            <p>ÉTAPE 3</p>
+            <p>ÉTAPE 3/3</p>
           </div>
         )}
       </div>

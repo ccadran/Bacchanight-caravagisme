@@ -36,14 +36,19 @@
     }
     .travelerVoice {
       height: 20%;
-      .imgContainer2 {
-        height: 60%;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-        }
+      display: flex;
+      align-items: center;
+      h4 {
+        font-size: 18px;
       }
+      // .imgContainer2 {
+      //   height: 60%;
+      //   img {
+      //     height: 100%;
+      //     width: 100%;
+      //     object-fit: cover;
+      //   }
+      // }
     }
   }
   .imgContainer {
