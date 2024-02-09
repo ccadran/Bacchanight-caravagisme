@@ -6,7 +6,6 @@ import styles from './switch.module.scss';
 
 export default function Page() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [clicked, setClicked] = useState(false);
   const sliderRef = useRef(null);
 
   useEffect(() => {
@@ -40,10 +39,11 @@ export default function Page() {
   };
 
   const handleValidation = () => {
-    if (clicked && currentIndex === 2) {
+    if (currentIndex === 2) {
       return true;
+    } else {
+      return false;
     }
-    return false;
   };
 
   const scrollPrev = () => {
@@ -107,12 +107,12 @@ export default function Page() {
       <button className={styles.arrows} onClick={scrollNext}>
         Suivant
       </button>
-      <button className={styles.button} onClick={handleValidation}>
+      <button className={styles.button} onClick={handleValidation()}>
         Valider
       </button>
-      {handleValidation() && (
+      {handleValidation() ? (
         <Link href="/experience/madeleine/machine">navigate to machine</Link>
-      )}
+      ) : null}
     </div>
   );
 }
