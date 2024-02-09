@@ -4,13 +4,13 @@
       "colorName": "red1",
       "color": "#8E2D05",
       "img": "/images/ColorPicker/red1.png",
-      "isCorrect": true
+      "isCorrect": false
     },
     {
       "colorName": "red2",
       "color": "#743A22",
       "img": "/images/ColorPicker/red2.png",
-      "isCorrect": false
+      "isCorrect": true
     },
     {
       "colorName": "red3",
