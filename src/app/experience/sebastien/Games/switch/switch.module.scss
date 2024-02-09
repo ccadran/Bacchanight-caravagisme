@@ -42,20 +42,28 @@
 }
 
 .image {
-  width: 100%;
+  width: 80%;
   height: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 .nav {
   display: flex;
   justify-content: space-around;
-  top: 0;
+  align-items: center;
+  margin-top: 30px;
+}
+.indicator {
+  margin: 0 6px;
 }
 
 .arrows {
   background: none;
   border: none;
-  background-color: $green;
+  display: flex;
+  align-items: center;
+  // background-color: $green;
   padding: 5px 10px;
   font-size: 30px;
 }
@@ -88,4 +96,39 @@
   padding: 5px 10px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.confirmation {
+  position: fixed;
+  bottom: 0;
+  cursor: pointer;
+  height: 6svh;
+  background-color: $green;
+  width: 100%;
+  max-width: 500px;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a,
+  p {
+    font-size: 16px;
+
+    color: $background;
+  }
+}
+.answer {
+  position: fixed;
+  bottom: 40px;
+  background-color: $darkBlue;
+  color: $green;
+  width: 100%;
+  max-width: 500px;
+
+  padding: 12px;
+
+  h4 {
+    margin-bottom: 6px;
+  }
 }

@@ -8,6 +8,7 @@ import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 export default function Page() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCorrect, setIsCorrect] = useState(false);
+  const [showAnswer, setShowAnswer] = useState(false);
   const sliderRef = useRef(null);
 
   // useEffect(() => {
@@ -38,12 +39,14 @@ export default function Page() {
         handleScroll();
       }
     }
+    setShowAnswer(false);
   };
 
   const handleValidation = () => {
     if (currentIndex === 2) {
       setIsCorrect(true);
     }
+    setShowAnswer(true);
   };
 
   const scrollPrev = () => {
@@ -59,6 +62,7 @@ export default function Page() {
         handleScroll();
       }
     }
+    setShowAnswer(false);
   };
 
   return (
@@ -109,25 +113,74 @@ export default function Page() {
           </div>
         </div>
         <div className={styles.nav}>
-          <button className={styles.arrows} onClick={scrollPrev}>
-            ←
-          </button>
-          <button className={styles.arrows} onClick={scrollNext}>
-            →
-          </button>
+          <div className={styles.arrows} onClick={scrollPrev}>
+            <img src="/icons/arrow-left.png" alt="" />
+          </div>
+          <div className={styles.indicators}>
+            <img
+              className={styles.indicator}
+              src={
+                currentIndex === 0
+                  ? "/icons/green-indicator.png"
+                  : "/icons/grey-indicator.png"
+              }
+              alt=""
+            />
+            <img
+              className={styles.indicator}
+              src={
+                currentIndex === 1
+                  ? "/icons/green-indicator.png"
+                  : "/icons/grey-indicator.png"
+              }
+              alt=""
+            />
+            <img
+              className={styles.indicator}
+              src={
+                currentIndex === 2
+                  ? "/icons/green-indicator.png"
+                  : "/icons/grey-indicator.png"
+              }
+              alt=""
+            />
+            <img
+              className={styles.indicator}
+              src={
+                currentIndex === 3
+                  ? "/icons/green-indicator.png"
+                  : "/icons/grey-indicator.png"
+              }
+              alt=""
+            />
+          </div>
+          <div className={styles.arrows} onClick={scrollNext}>
+            <img src="/icons/arrow-right.png" alt="" />
+          </div>
         </div>
-        <div className={styles.wrapper}>
-          <button className={styles.button} onClick={handleValidation}>
-            Valider
-          </button>
+        {showAnswer && (
+          <div className={`${styles.answer} `}>
+            <div className={styles.answerContent}>
+              <h4>Scientifique</h4>
+              {isCorrect ? (
+                <p>Super, tu as réussi ! Merci beaucoup !</p>
+              ) : (
+                <p>Ca n’a pas l’air d’être la bonne réponse. </p>
+              )}
+            </div>
+          </div>
+        )}
+
+        <div
+          className={styles.confirmation}
+          onClick={!isCorrect && handleValidation}
+        >
+          {isCorrect ? (
+            <Link href="/experience/sebastien/transiMachine">Continuer</Link>
+          ) : (
+            <p>Valider</p>
+          )}
         </div>
-        {isCorrect ? (
-          <button className={styles.validation}>
-            <Link href="/experience/sebastien/transiMachine">
-              navigate to machine
-            </Link>
-          </button>
-        ) : null}
       </div>
     </LayoutNav>
   );
