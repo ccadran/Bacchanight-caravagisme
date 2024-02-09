@@ -22,7 +22,7 @@
           "switchToGame": "/experience/sebastien/Games/light"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/sebastien/1"
     }
   ],
   "transition": [
@@ -30,7 +30,7 @@
       "id": 1,
       "text": [
         {
-          "text": "Bien, désormais, il ne manque plus qu’à trouver ce que la dame porte dans ses mains. Dis-moi ce que tu vois lorsque tu regardes le tableau.",
+          "text": "Et la lumière fut, ça a marché! Bien, désormais, il ne manque plus qu’à trouver ce que la dame porte dans ses mains. Dis-moi ce que tu vois lorsque tu regardes le tableau.",
           "speaker": "Scientifique"
         },
         {
@@ -44,7 +44,7 @@
           "switchToGame": "/experience/sebastien/Games/switch"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/sebastien/2"
     }
   ],
   "machine": [
@@ -53,15 +53,19 @@
       "text": [
         {
           "text": "C’est tout ce qu’il me manquait pour avoir une description complète de l’œuvre.",
-          "speaker": "Machine"
+          "speaker": "Scientifique"
         },
         {
           "text": "Il ne reste plus qu'à activer la machine pour délivrer le tableau. ",
-          "speaker": "Machine"
+          "speaker": "Scientifique"
         },
         {
           "text": "Je vais appuyer sur le bouton d’activation, tu n’auras qu'à cliquer sur ton écran au bon moment. Tu vas vite comprendre ne t’inquiète pas.",
-          "speaker": "Machine"
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Appuie lorsque les curseurs se trouvent dans la zone verte.",
+          "speaker": "Scientifique"
         }
       ],
       "choices": [
@@ -70,7 +74,7 @@
           "switchToGame": "experience/sebastien/machine"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/sebastien/3"
     }
   ]
 }

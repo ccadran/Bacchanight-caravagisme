@@ -17,7 +17,7 @@
           "proposition": "J'y suis "
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/madeleine/1"
     },
     {
       "id": 1,
@@ -41,7 +41,7 @@
           "switchToGame": "/experience/madeleine/Games/puzzle"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/madeleine/2"
     }
   ],
   "transition": [
@@ -71,33 +71,7 @@
           "switchToGame": "/experience/madeleine/Games/colorPicker"
         }
       ],
-      "audio": "/audios/intro/2"
-    }
-  ],
-  "machine": [
-    {
-      "id": 1,
-      "text": [
-        {
-          "text": "Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-          "speaker": "Machine"
-        },
-        {
-          "text": "Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-          "speaker": "Machine"
-        },
-        {
-          "text": "Je vais appuyer sur le bouton d’activation, tu n’auras qu'à cliquer sur ton écran au bon moment. Tu vas vite comprendre ne t’inquiète pas.",
-          "speaker": "Machine"
-        }
-      ],
-      "choices": [
-        {
-          "proposition": "Je me demande surtout qui tu es ! ",
-          "switchToGame": "/experience/madeleine/machine"
-        }
-      ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/madeleine/3"
     }
   ]
 }

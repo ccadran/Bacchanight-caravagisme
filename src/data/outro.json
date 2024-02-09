@@ -4,23 +4,15 @@
       "id": 1,
       "text": [
         {
-          "text": "On touche au but, il n'y a plus qu'à activer la machine, et je pourrai repartir sauver les 2 ta...",
+          "text": "Bravo, quel oeil ! On touche au but, il n'y a plus qu'à activer la machine, et je pourrai repartir sauver les 2 ta...",
           "speaker": "Scientifique"
         },
         {
-          "text": "POLICE, OUVREZ LA PORTE, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR”",
+          "text": "Vous êtes en état d’arrestation, identifiez-vous MAINTENANT ! Il est interdit de verrouiller le local des scellés de l’intérieur. Des renforts arrivent !",
           "speaker": "POLICE"
         },
         {
           "text": "Zut, on a de la compagnie, il faut se dépêcher.",
-          "speaker": "Scientifique"
-        },
-        {
-          "text": "Vous êtes en état d’arrestation, identifiez-vous maintenant, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR. Mes collègues sont en route”",
-          "speaker": "POLICE"
-        },
-        {
-          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
           "speaker": "Scientifique"
         }
       ],
@@ -29,7 +21,7 @@
           "proposition": "Vous êtes en train de voler la police?? "
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/outro/1"
     },
     {
       "id": 1,
@@ -61,21 +53,17 @@
           "switchToIndex": "3"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/outro/2"
     },
     {
       "id": 3,
       "text": [
         {
-          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
+          "text": "Oui, tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
           "speaker": "Scientifique"
         },
         {
-          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
-          "speaker": "Scientifique"
-        },
-        {
-          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.”",
+          "text": "Appuie lorsque les curseurs se trouvent dans la zone verte.",
           "speaker": "Scientifique"
         }
       ],
@@ -85,7 +73,7 @@
           "switchToGame": "/experience/outro/machine"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/outro/fin1"
     },
     {
       "id": 4,
@@ -105,7 +93,7 @@
           "switchToGame": "/experience/outro/end?wichEnd=1"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/outro/fin2"
     }
   ],
   "afterGame": [
@@ -117,11 +105,7 @@
           "speaker": "Scientifique"
         },
         {
-          "text": "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
-          "speaker": "Scientifique"
-        },
-        {
-          "text": "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+          "text": "En espérant que nos chemins se croisent à nouveau.",
           "speaker": "Scientifique"
         }
       ],
@@ -131,7 +115,7 @@
           "switchToGame": "/experience/outro/end?wichEnd=2"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/outro/fin1_2"
     }
   ]
 }

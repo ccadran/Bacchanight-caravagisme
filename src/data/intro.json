@@ -10,7 +10,7 @@
           "proposition": "Mal… mais je vous comprends."
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/intro/1"
     },
     {
       "id": 2,
@@ -57,7 +57,7 @@
           "switchToGame": "/experience/sebastien/"
         }
       ],
-      "audio": "/audios/intro/2"
+      "audio": "/audios/intro/3"
     }
   ]
 }
