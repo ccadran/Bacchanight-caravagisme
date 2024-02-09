@@ -66,7 +66,7 @@ export default function Page({ data, index }) {
             // }
           },
         },
-        index * 2.5 // Adjust the delay between lines if needed
+        index * 3.5 // Adjust the delay between lines if needed
       );
     });
 
