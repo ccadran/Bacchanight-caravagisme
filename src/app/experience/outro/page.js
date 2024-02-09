@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import Dialogues from "@/app/components/Dialogues/dialogues";
 import Data from "../../../data/outro.json";
 
-export default function page() {
+export default function outro() {
   const data = Data.outro;
   return (
     <Layout>

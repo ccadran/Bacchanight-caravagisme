@@ -6,12 +6,12 @@ import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 import Data from "../../../../../data/painting.json";
 import styles from "./colorPicker.module.scss";
 
-export default function page() {
+export default function ColorPicker() {
   const data = Data.madeleine;
-  const [currentColor, setCurrentColor] = useState(data[0]);
+
+  const [currentColor, setCurrentColor] = useState(data[3]);
   const [showAnswer, setShowAnswer] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  // console.log(currentColor);
 
   const handleColorClick = (color) => {
     setCurrentColor(color);

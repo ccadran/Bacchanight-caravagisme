@@ -6,7 +6,7 @@ import styles from "./machine.module.scss";
 import { useRouter } from "next/navigation";
 import Button from "../Button/button";
 
-export default function Machine({ link }) {
+export default function MachineComponents({ link }) {
   const movingBarRef = useRef(null);
   const indicatorRef = useRef(null);
   const [currentLevel, setCurrentLevel] = useState(0);

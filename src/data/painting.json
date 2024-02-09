@@ -1,45 +1,33 @@
 {
   "madeleine": [
     {
-      "colorName": "red",
-      "color": "#FA0000",
-      "img": "/images/colorPicker/red.png",
+      "colorName": "red1",
+      "color": "#8E2D05",
+      "img": "/images/ColorPicker/red1.png",
+      "isCorrect": false
+    },
+    {
+      "colorName": "red2",
+      "color": "#743A22",
+      "img": "/images/ColorPicker/red2.png",
       "isCorrect": true
     },
     {
-      "colorName": "green",
-      "color": "#00970F",
-      "img": "/images/colorPicker/green.png",
+      "colorName": "red3",
+      "color": "#70261E",
+      "img": "/images/ColorPicker/red3.png",
       "isCorrect": false
     },
     {
-      "colorName": "blue",
-      "color": "#001897",
-      "img": "/images/colorPicker/blue.png",
+      "colorName": "red4",
+      "color": "#724926",
+      "img": "/images/ColorPicker/red4.png",
       "isCorrect": false
     },
     {
-      "colorName": "yellow",
-      "color": "#EDFF1F",
-      "img": "/images/colorPicker/yellow.png",
-      "isCorrect": false
-    },
-    {
-      "colorName": "grey",
-      "color": "#696969",
-      "img": "/images/colorPicker/grey.png",
-      "isCorrect": false
-    },
-    {
-      "colorName": "purple",
-      "color": "#5A0090",
-      "img": "/images/colorPicker/purple.png",
-      "isCorrect": false
-    },
-    {
-      "colorName": "pink",
-      "color": "#FA00E1",
-      "img": "/images/colorPicker/pink.png",
+      "colorName": "red5",
+      "color": "#791819",
+      "img": "/images/ColorPicker/red5.png",
       "isCorrect": false
     }
   ]

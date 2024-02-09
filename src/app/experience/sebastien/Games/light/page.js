@@ -5,7 +5,7 @@ import React, { useRef, useState } from "react";
 import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 import styles from "./light.module.scss";
 import gsap from "gsap";
-export default function page() {
+export default function LightGame() {
   const crossRef = useRef(null);
   const [showCross, setShowCross] = useState(false);
   const [isLight, setIsLight] = useState(false);
@@ -56,8 +56,8 @@ export default function page() {
         className={styles.imageContainer}
         style={{
           background: isCorrect
-            ? `url("/images/ColorPicker/red.png") center/cover`
-            : `url("/images/ColorPicker/green.png") center/cover`,
+            ? `url("/images/Light/light.png") center/cover`
+            : `url("/images/Light/dark.png") center/cover`,
         }}
         onClick={(e) => handleGlobalClick(e)}
       >

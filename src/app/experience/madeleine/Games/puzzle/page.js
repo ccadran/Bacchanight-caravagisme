@@ -8,7 +8,7 @@ import styles from "./puzzle.module.scss";
 
 import ImageTile from "@/app/components/Tile/tile.js";
 
-export default function page() {
+export default function PuzzleGame() {
   const defaultTiles = [
     {
       src: "/images/puzzle/tile1.png",
