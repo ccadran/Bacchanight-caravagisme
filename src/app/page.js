@@ -17,7 +17,11 @@ export default function Home() {
             d’une grande mission, l’avenir est entre vos mains.
           </p>
         </div>
-        <Button text="Démarrer l'éxpérience" link="/experience" />
+        <Button
+          className={styles.start}
+          text="Démarrer l'éxpérience"
+          link="/experience"
+        />
         <div className={styles.credits}>
           <Link href="/experience/outro/credits">Crédits</Link>
         </div>
