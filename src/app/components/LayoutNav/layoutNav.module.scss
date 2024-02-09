@@ -1,13 +1,13 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100svh;
   width: 100%;
 }
 .navContainer {
   display: flex;
   justify-content: space-between;
-  height: 5vh;
+  height: 5svh;
   margin: 0 12px;
   align-items: center;
   .controller {

@@ -7,7 +7,7 @@ export default function PanelAnims() {
         autoplay
         loop
         src="/anims/MOTION_PANEL.json"
-        style={{ height: "30vh", width: "100%" }}
+        style={{ height: "30svh", width: "100%" }}
       >
         <Controls visible={false} />
       </Player>
