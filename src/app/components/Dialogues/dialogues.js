@@ -149,7 +149,8 @@ export default function Page({ data, index }) {
               <Dialogue
                 className={`line-${index}`}
                 key={index}
-                dialogue={line}
+                dialogue={line.text}
+                speaker={line.speaker}
               />
             ))}
           </div>

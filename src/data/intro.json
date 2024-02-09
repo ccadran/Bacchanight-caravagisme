@@ -2,7 +2,9 @@
   "intro": [
     {
       "id": 1,
-      "text": ["Allo? Allo? Vous me recevez?"],
+      "text": [
+        { "text": "Allo? Allo? Vous me recevez?", "speaker": "Scientifique" }
+      ],
       "choices": [
         {
           "proposition": "Mal… mais je vous comprends."
@@ -13,9 +15,18 @@
     {
       "id": 2,
       "text": [
-        "Très bien, c’est tout ce qui compte. Je ne vis pas dans la même époque que toi, il serait trop compliqué de tout t’expliquer! ",
-        "Voilà le topo, deux peintures sur le caravagisme sont maintenues en captivité dans un hangar sécurisé, mais nous devons absolument les récupérer.",
-        " J’ai réussi à m’infiltrer mais les œuvres sont protégées, il faut que tu m’aides en m’apportant des détails concernant les tableaux pour que je puisse les libérer de leurs sceaux."
+        {
+          "text": "Très bien, c’est tout ce qui compte. Je ne vis pas dans la même époque que toi, il serait trop compliqué de tout t’expliquer!",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Voilà le topo, deux peintures sur le caravagisme sont maintenues en captivité dans un hangar sécurisé, mais nous devons absolument les récupérer.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "J’ai réussi à m’infiltrer mais les œuvres sont protégées, il faut que tu m’aides en m’apportant des détails concernant les tableaux pour que je puisse les libérer de leurs sceaux.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
@@ -24,13 +35,21 @@
       ],
       "audio": "/audios/intro/2"
     },
-
     {
       "id": 2,
       "text": [
-        "J’aurais aimé ne pas avoir à te le révéler mais je suis un agent de la CIA, c’est une mission secrète et notre temps est compté.",
-        " Le système de surveillance est hors service mais ça ne durera pas éternellement.",
-        " Commence par te diriger vers le premier tableau, tu verras un grand gaillard musclé et deux femmes se tenant à sa droite. Il doit se trouver tout prêt de l’entrée de la salle."
+        {
+          "text": "J’aurais aimé ne pas avoir à te le révéler mais je suis un agent de la CIA, c’est une mission secrète et notre temps est compté.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Le système de surveillance est hors service mais ça ne durera pas éternellement.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Commence par te diriger vers le premier tableau, tu verras un grand gaillard musclé et deux femmes se tenant à sa droite. Il doit se trouver tout prêt de l’entrée de la salle.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
@@ -43,9 +62,18 @@
     {
       "id": 2,
       "text": [
-        "Parfait ! Il faut savoir que les jeux d’ombres et de lumières du clair-obscur sont une des caractéristiques phares du mouvement créé par Michelangelo le Caravage.",
-        "Je sais que cette œuvre contient une source de lumière, seulement je n’arrive pas à savoir où elle se situe dans la composition.",
-        "A l’aide de ton doigt, place la source de lumière en cliquant sur l’image."
+        {
+          "text": "Parfait ! Il faut savoir que les jeux d’ombres et de lumières du clair-obscur sont une des caractéristiques phares du mouvement créé par Michelangelo le Caravage.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Je sais que cette œuvre contient une source de lumière, seulement je n’arrive pas à savoir où elle se situe dans la composition.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "A l’aide de ton doigt, place la source de lumière en cliquant sur l’image.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {

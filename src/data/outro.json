@@ -3,11 +3,26 @@
     {
       "id": 1,
       "text": [
-        "On touche au but, il n'y a plus qu'à activer la machine, et je pourrai repartir sauver les 2 t",
-        "POLICE, OUVREZ LA PORTE, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR”",
-        "Zut, on a de la compagnie, il faut se dépêcher.",
-        "Vous êtes en état d’arrestation, identifiez-vous maintenant, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR. Mes collègues sont en route”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
+        {
+          "text": "On touche au but, il n'y a plus qu'à activer la machine, et je pourrai repartir sauver les 2 t",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "POLICE, OUVREZ LA PORTE, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR”",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Zut, on a de la compagnie, il faut se dépêcher.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Vous êtes en état d’arrestation, identifiez-vous maintenant, IL EST INTERDIT DE VERROUILLER LE LOCAL DE SCELLÉS DE L'INTÉRIEUR. Mes collègues sont en route”",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
@@ -19,10 +34,22 @@
     {
       "id": 1,
       "text": [
-        "C'est-à-dire que… la CIA dont je t’ai parlé n’est pas tout à fait celle à laquelle tu penses, en réalité nous sommes la Confédération des Intéressés de l’Art",
-        "Il est possible que je t’aie menti pour mieux te manipuler. Mais c’est pour la bonne cause crois-moi.",
-        "Aujourd’hui l’art est numérique, plus que des zéros et des un. Les œuvres d'antan sont prohibées, alors avec une bande d’amis rebelles, on essaye de faire revivre l’histoire, peu importe si ça dérange l'autorité.",
-        "On ne peut pas s’arrêter en si bon chemin, aide-moi à délivrer le dernier tableau avant que je ne me fasse attraper."
+        {
+          "text": "C'est-à-dire que… la CIA dont je t’ai parlé n’est pas tout à fait celle à laquelle tu penses, en réalité nous sommes la Confédération des Intéressés de l’Art",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Il est possible que je t’aie menti pour mieux te manipuler. Mais c’est pour la bonne cause crois-moi.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "Aujourd’hui l’art est numérique, plus que des zéros et des un. Les œuvres d'antan sont prohibées, alors avec une bande d’amis rebelles, on essaye de faire revivre l’histoire, peu importe si ça dérange l'autorité.",
+          "speaker": "Scientifique"
+        },
+        {
+          "text": "On ne peut pas s’arrêter en si bon chemin, aide-moi à délivrer le dernier tableau avant que je ne me fasse attraper.",
+          "speaker": "Scientifique"
+        }
       ],
       "choices": [
         {
@@ -34,11 +61,26 @@
     {
       "id": 2,
       "text": [
-        "grsfvBonjour mon ami, tu te demandes sûrement ce que tu fais là!",
-        "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”",
-        "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?”"
+        {
+          "text": "Bonjour mon ami, tu te demandes sûrement ce que tu fais là!",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Mais voilà que le caravagisme et ses techniques me compliquent la tâche et des détails manquent.",
+          "speaker": "Machine"
+        },
+        {
+          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
+          "speaker": "Machine"
+        },
+        {
+          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
+          "speaker": "Machine"
+        },
+        {
+          "text": "J’ai besoin de toi, il faut que tu m’aides à recréer les œuvres autour de toi tu comprends ?",
+          "speaker": "Machine"
+        }
       ],
       "choices": [
         {
@@ -55,9 +97,18 @@
     {
       "id": 3,
       "text": [
-        "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
-        "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
-        "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.”"
+        {
+          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Tu as fait le bon choix, nous ne laisserons pas vaincre un régime de censure.”",
+          "speaker": "Machine"
+        }
       ],
       "choices": [
         {
@@ -67,12 +118,17 @@
       ],
       "audio": "/audios/intro/2"
     },
-
     {
       "id": 4,
       "text": [
-        "Tu ne comprends rien, ces tableaux vont être détruits tu m'entends!? Détruits!!!",
-        "Tu ne comprends rien, ces tableaux vont être détruits tu m'entends!? Détruits!!!"
+        {
+          "text": "Tu ne comprends rien, ces tableaux vont être détruits tu m'entends!? Détruits!!!",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Tu ne comprends rien, ces tableaux vont être détruits tu m'entends!? Détruits!!!",
+          "speaker": "Machine"
+        }
       ],
       "choices": [
         {
@@ -87,9 +143,18 @@
     {
       "id": 1,
       "text": [
-        "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
-        "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
-        "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide"
+        {
+          "text": "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+          "speaker": "Machine"
+        },
+        {
+          "text": "Quelle œuvre magnifique, merci encore mon ami, je dois filer mais je n’oublierai jamais ta précieuse aide",
+          "speaker": "Machine"
+        }
       ],
       "choices": [
         {
