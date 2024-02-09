@@ -13,9 +13,8 @@ export default function Home() {
         </div>
         <div className={styles.intro}>
           <p>
-            Dans un futur où le numérique a remplacé les arts d'antan, un
-            professeur rebelle parvient à vous contacter pour faire revivre
-            d’anciennes techniques disparues.
+            Des tableaux sont en danger. Un voyageur dans le temps vous investis
+            d’une grande mission, l’avenir est entre vos mains.
           </p>
         </div>
         <Button text="Démarrer l'éxpérience" link="/experience" />

@@ -1,8 +1,9 @@
-'use client';
-import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from './switch.module.scss';
+"use client";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./switch.module.scss";
+import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 
 export default function Page() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,7 +33,7 @@ export default function Page() {
       if (nextScrollLeft <= maxScrollLeft) {
         sliderRef.current.scrollTo({
           left: nextScrollLeft,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
         handleScroll();
       }
@@ -53,71 +54,75 @@ export default function Page() {
       if (prevScrollLeft >= 0) {
         sliderRef.current.scrollTo({
           left: prevScrollLeft,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
         handleScroll();
       }
     }
   };
-  
+
   return (
-    <div className={styles.container}>
-      <div className={styles.slider} ref={sliderRef} onScroll={handleScroll}>
-        <div className={styles.slide}>
-          <Image
-            src={'/images/sebastien/LIVRE.png'}
-            width={330}
-            height={249}
-            className={styles.image}
-            alt="Slide image 1"
-          />
+    <LayoutNav>
+      <div className={styles.container}>
+        <div className={styles.slider} ref={sliderRef} onScroll={handleScroll}>
+          <div className={styles.slide}>
+            <Image
+              src={"/images/sebastien/LIVRE.png"}
+              width={330}
+              height={249}
+              className={styles.image}
+              alt="Slide image 1"
+            />
+          </div>
+          <div className={styles.slide}>
+            <Image
+              src={"/images/sebastien/FIOLE.png"}
+              width={330}
+              height={249}
+              className={styles.image}
+              alt="Slide image 2"
+            />
+          </div>
+          <div className={styles.slide}>
+            <Image
+              src={"/images/sebastien/FLECHE.png"}
+              width={330}
+              height={249}
+              className={styles.image}
+              alt="Slide image 3"
+            />
+          </div>
+          <div className={styles.slide}>
+            <Image
+              src={"/images/sebastien/POMME.png"}
+              width={330}
+              height={249}
+              className={styles.image}
+              alt="Slide image 4"
+            />
+          </div>
         </div>
-        <div className={styles.slide}>
-          <Image
-            src={'/images/sebastien/FIOLE.png'}
-            width={330}
-            height={249}
-            className={styles.image}
-            alt="Slide image 2"
-          />
+        <div className={styles.nav}>
+          <button className={styles.arrows} onClick={scrollPrev}>
+            ←
+          </button>
+          <button className={styles.arrows} onClick={scrollNext}>
+            →
+          </button>
         </div>
-        <div className={styles.slide}>
-          <Image
-            src={'/images/sebastien/FLECHE.png'}
-            width={330}
-            height={249}
-            className={styles.image}
-            alt="Slide image 3"
-          />
+        <div className={styles.wrapper}>
+          <button className={styles.button} onClick={handleValidation}>
+            Valider
+          </button>
         </div>
-        <div className={styles.slide}>
-          <Image
-            src={'/images/sebastien/POMME.png'}
-            width={330}
-            height={249}
-            className={styles.image}
-            alt="Slide image 4"
-          />
-        </div>
+        {isCorrect ? (
+          <button className={styles.validation}>
+            <Link href="/experience/sebastien/transiMachine">
+              navigate to machine
+            </Link>
+          </button>
+        ) : null}
       </div>
-      <div className={styles.nav}>
-        <button className={styles.arrows} onClick={scrollPrev}>
-          ←
-        </button>
-        <button className={styles.arrows} onClick={scrollNext}>
-          →
-        </button>
-      </div>
-      <div className={styles.wrapper}>
-        <button className={styles.button} onClick={handleValidation}>
-          Valider
-        </button>
-      </div>
-      {isCorrect ? (
-        <button className={styles.validation}>
-          <Link href="/experience/madeleine/machine">navigate to machine</Link>
-        </button>
-      ) : null}
-    </div>
+    </LayoutNav>
   );
 }

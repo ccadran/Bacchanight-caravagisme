@@ -154,10 +154,10 @@ export default function MachineComponents({ link }) {
       {readyForNextStep && (
         <div className={styles.finish}>
           <p>
-            Bravo tu as finis toutes les étapes tu peux maintenant lancer la
+            Bravo tu as fini toutes les étapes tu peux maintenant lancer la
             machine !
           </p>
-          <Button link={link} text="Lancer la machine" />
+          <Button link={link} text="Délivrer le tableau" />
         </div>
       )}
     </div>

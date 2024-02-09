@@ -71,7 +71,7 @@
       "choices": [
         {
           "proposition": "Démarrer la machine",
-          "switchToGame": "experience/sebastien/machine"
+          "switchToGame": "/experience/sebastien/machine"
         }
       ],
       "audio": "/audios/sebastien/3"
