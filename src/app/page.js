@@ -3,14 +3,16 @@ import Link from "next/link";
 import styles from "./page.module.scss";
 import Layout from "./layout";
 import Button from "./components/Button/button"; // Import correct
+import Phone from "./components/phone-3d/phone";
 
 export default function Home() {
   return (
     <Layout>
       <main className={styles.main}>
-        <div className={styles.phone}>
+        {/* <div className={styles.phone}>
           <img src="/images/3D-phone.png" alt="" />
-        </div>
+        </div> */}
+        <Phone />
         <div className={styles.intro}>
           <p>
             Des tableaux sont en danger. Un voyageur dans le temps vous investis
