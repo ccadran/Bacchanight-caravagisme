@@ -71,7 +71,7 @@ export default function Page() {
         <div className={styles.avatarContainer}>
           <img src="/images/avatar.png" alt="" />
         </div>
-        <p>Trouves l’image qui correspond au tableau.</p>
+        <p>Trouve l’image qui correspond au tableau.</p>
       </div>
       <div className={styles.container}>
         <div className={styles.slider} ref={sliderRef} onScroll={handleScroll}>

@@ -89,7 +89,7 @@
       ],
       "choices": [
         {
-          "proposition": "Clicker pour voir la suite",
+          "proposition": "Cliquer pour voir la suite",
           "switchToGame": "/experience/outro/end?wichEnd=1"
         }
       ],
@@ -111,7 +111,7 @@
       ],
       "choices": [
         {
-          "proposition": "Clicker pour voir la suite",
+          "proposition": "Cliquer pour voir la suite",
           "switchToGame": "/experience/outro/end?wichEnd=2"
         }
       ],

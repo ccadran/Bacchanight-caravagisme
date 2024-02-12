@@ -13,7 +13,7 @@ export default function Home() {
         </div>
         <div className={styles.intro}>
           <p>
-            Des tableaux sont en danger. Un voyageur dans le temps vous investis
+            Des tableaux sont en danger. Un voyageur dans le temps vous investit
             d’une grande mission, l’avenir est entre vos mains.
           </p>
         </div>

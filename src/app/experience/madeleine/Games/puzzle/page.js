@@ -1,57 +1,57 @@
-'use client';
-import { useState, useEffect, React } from 'react';
-import Link from 'next/link';
-import LayoutNav from '../../../../components/LayoutNav/layoutNav';
+"use client";
+import { useState, useEffect, React } from "react";
+import Link from "next/link";
+import LayoutNav from "../../../../components/LayoutNav/layoutNav";
 
-import styles from './puzzle.module.scss';
+import styles from "./puzzle.module.scss";
 
-import ImageTile from '@/app/components/Tile/tile.js';
+import ImageTile from "@/app/components/Tile/tile.js";
 
 export default function PuzzleGame() {
   const defaultTiles = [
     {
-      src: '/images/puzzle/tile1.png',
-      alt: 'Puzzle tile 1',
+      src: "/images/puzzle/tile1.png",
+      alt: "Puzzle tile 1",
       rotation: 360,
     },
     {
-      src: '/images/puzzle/tile2.png',
-      alt: 'Puzzle tile 2',
+      src: "/images/puzzle/tile2.png",
+      alt: "Puzzle tile 2",
       rotation: 90,
     },
     {
-      src: '/images/puzzle/tile3.png',
-      alt: 'Puzzle tile 3',
+      src: "/images/puzzle/tile3.png",
+      alt: "Puzzle tile 3",
       rotation: 180,
     },
     {
-      src: '/images/puzzle/tile4.png',
-      alt: 'Puzzle tile 4',
+      src: "/images/puzzle/tile4.png",
+      alt: "Puzzle tile 4",
       rotation: 270,
     },
     {
-      src: '/images/puzzle/tile5.png',
-      alt: 'Puzzle tile 5',
+      src: "/images/puzzle/tile5.png",
+      alt: "Puzzle tile 5",
       rotation: 270,
     },
     {
-      src: '/images/puzzle/tile6.png',
-      alt: 'Puzzle tile 6',
+      src: "/images/puzzle/tile6.png",
+      alt: "Puzzle tile 6",
       rotation: 270,
     },
     {
-      src: '/images/puzzle/tile7.png',
-      alt: 'Puzzle tile 7',
+      src: "/images/puzzle/tile7.png",
+      alt: "Puzzle tile 7",
       rotation: 180,
     },
     {
-      src: '/images/puzzle/tile8.png',
-      alt: 'Puzzle tile 8',
+      src: "/images/puzzle/tile8.png",
+      alt: "Puzzle tile 8",
       rotation: 360,
     },
     {
-      src: '/images/puzzle/tile9.png',
-      alt: 'Puzzle tile 9',
+      src: "/images/puzzle/tile9.png",
+      alt: "Puzzle tile 9",
       rotation: 90,
     },
   ];
@@ -96,7 +96,7 @@ export default function PuzzleGame() {
             <img src="/images/avatar.png" alt="" />
           </div>
           <p>
-            Remet le tableau en ordre en cliquant sur les pièces pour les faire
+            Remets le tableau en ordre en cliquant sur les pièces pour les faire
             tourner.
           </p>
         </div>
@@ -126,7 +126,7 @@ export default function PuzzleGame() {
             className={styles.link}
             href="/experience/madeleine/transiColor"
           >
-            Continuer{' '}
+            Continuer{" "}
           </Link>
         )}
       </div>
