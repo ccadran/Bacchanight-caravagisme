@@ -7,12 +7,14 @@
   .endPhrase {
     margin-top: 10svh;
   }
+
   .otherEnd {
-    margin-top: 60svh;
+    margin-top: 20svh;
     a {
       background-color: $green;
       padding: 18px 12px;
       color: $background;
+      font-family: $body;
     }
   }
   .controller {
@@ -25,5 +27,14 @@
     a {
       border-bottom: 1px solid $green;
     }
+  }
+}
+.paint {
+  height: 45svh;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

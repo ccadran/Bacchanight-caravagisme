@@ -8,12 +8,8 @@
           "speaker": "Scientifique"
         },
         {
-          "text": "Vous êtes en état d’arrestation, identifiez-vous MAINTENANT ! Il est interdit de verrouiller le local des scellés de l’intérieur. Des renforts arrivent !",
+          "text": "Vous êtes en état d’arrestation, identifiez-vous MAINTENANT ! Il est interdit de verrouiller le local des scellés de l’intérieur. Les renforts arrivent !",
           "speaker": "POLICE"
-        },
-        {
-          "text": "Zut, on a de la compagnie, il faut se dépêcher.",
-          "speaker": "Scientifique"
         }
       ],
       "choices": [

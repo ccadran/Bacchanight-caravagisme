@@ -28,7 +28,7 @@ export default function MachineComponents({ link }) {
       if (currentLevel < levels.length - 1) {
         setTimeout(() => {
           handleRestart();
-        }, 1000);
+        }, 500);
       }
       // }
       if (currentLevel === levels.length - 1) {

@@ -26,6 +26,9 @@ function EndContent() {
           ? ". Bravo ! Le caravagisme se souviendra de toi."
           : "Tu as laissé la censure gagner. La Confédération des Intéressés de l’Art a été dissoute et désormais il ne reste que l’art numérique."}
       </div>
+      <div className={styles.paint}>
+        <img src="/images/paint.png" alt="" />
+      </div>
       <div className={styles.otherEnd}>
         {search === "2" ? (
           <Link href={`/experience/outro/otherEnd?index=3`}>
