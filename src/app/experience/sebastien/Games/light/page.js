@@ -56,7 +56,7 @@ export default function LightGame() {
         className={styles.imageContainer}
         style={{
           background: isCorrect
-            ? `url("/images/Light/light.png") center/cover`
+            ? `url("/images/Light/light.jpg") center/cover`
             : `url("/images/Light/dark.png") center/cover`,
         }}
         onClick={(e) => handleGlobalClick(e)}
