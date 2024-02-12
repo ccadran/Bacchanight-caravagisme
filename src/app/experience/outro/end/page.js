@@ -23,8 +23,8 @@ function EndContent() {
     <div className={styles.end}>
       <div className={styles.endPhrase}>
         {search === "2"
-          ? "Bravo d'avoir aidé"
-          : "Vous avec laissé la censure gagner"}
+          ? ". Bravo ! Le caravagisme se souviendra de toi."
+          : "Tu as laissé la censure gagner. La Confédération des Intéressés de l’Art a été dissoute et désormais il ne reste que l’art numérique."}
       </div>
       <div className={styles.otherEnd}>
         {search === "2" ? (
