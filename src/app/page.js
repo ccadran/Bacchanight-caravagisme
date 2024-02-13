@@ -9,7 +9,7 @@ export default function Home() {
     <Layout>
       <main className={styles.main}>
         <div className={styles.phone}>
-          <img src="/images/3D-phone.png" alt="" />
+          <img src="/images/3D-phone.gif" alt="" />
         </div>
         <div className={styles.intro}>
           <p>

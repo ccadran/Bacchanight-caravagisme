@@ -27,7 +27,7 @@ function EndContent() {
           : "Tu as laissé la censure gagner. La Confédération des Intéressés de l’Art a été dissoute et désormais il ne reste que l’art numérique."}
       </div>
       <div className={styles.paint}>
-        <img src="/images/paint.png" alt="" />
+        <img src="/images/paint.gif" alt="" />
       </div>
       <div className={styles.otherEnd}>
         {search === "2" ? (

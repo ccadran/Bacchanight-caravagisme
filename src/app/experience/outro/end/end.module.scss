@@ -6,10 +6,13 @@
   align-items: center;
   .endPhrase {
     margin-top: 10svh;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 3svh;
   }
 
   .otherEnd {
-    margin-top: 20svh;
+    margin-top: 15svh;
     a {
       background-color: $green;
       padding: 18px 12px;
