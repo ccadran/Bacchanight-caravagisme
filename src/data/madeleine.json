@@ -23,7 +23,7 @@
       "id": 1,
       "text": [
         {
-          "text": "D’accord, pour ton information, le Caravagisme représente également la vanité, évoquant les fins dernières de l’homme telles que la mort.",
+          "text": "D’accord, pour ton information, le caravagisme est un style qui met en valeur la vanité des hommes et de la vie terrestre ainsi que la mort.",
           "speaker": "Scientifique"
         },
         {
@@ -31,13 +31,13 @@
           "speaker": "Scientifique"
         },
         {
-          "text": "Remets le tableau en ordre en cliquant sur les pièces pour les faire tourner.",
+          "text": "Redresse les éléments du tableau dans le bon sens en cliquant sur les pièces pour les faire tourner.",
           "speaker": "Scientifique"
         }
       ],
       "choices": [
         {
-          "proposition": "Remettre les pièces dans le bon ordre",
+          "proposition": "Remettre les pièces dans le bon sens",
           "switchToGame": "/experience/madeleine/Games/puzzle"
         }
       ],

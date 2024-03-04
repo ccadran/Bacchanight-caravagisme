@@ -22,7 +22,7 @@ export default function PuzzleGame() {
     {
       src: "/images/puzzle/tile3.png",
       alt: "Puzzle tile 3",
-      rotation: 180,
+      rotation: 360,
     },
     {
       src: "/images/puzzle/tile4.png",
